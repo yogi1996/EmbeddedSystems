@@ -53,7 +53,11 @@ int main()
     fprintf(stderr, "Error: Could not open framebuffer: %d\n", err);
     exit(1);
   }
-
+	for (col = 0 ; col < 64 ; col++) {
+	for (row =0; row <24;row++)
+    
+    fbputchar('', row, col);
+  }
   /* Draw rows of asterisks across the top and bottom of the screen */
   for (col = 0 ; col < 64 ; col++) {
     fbputchar('*', 0, col);
