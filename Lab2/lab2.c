@@ -43,7 +43,7 @@ int main()
 {
   int err, col,row,row1,col1;
   row1 = 14;
-  col1 = 0;
+  col1 = 1;
 
   struct sockaddr_in serv_addr;
 
@@ -130,7 +130,7 @@ int main()
       if (packet.keycode[0]) { /* Trying to princt a char */
       		char c  = packet.keycode[0] + 93;
       		
-			fbputchar(row1, col1, 1);
+			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
 			if (col1 == 24){
 			row1 = row1 +1 ;
