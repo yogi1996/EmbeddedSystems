@@ -128,7 +128,7 @@ int main()
       }
       
       if (packet.keycode[0]) { /* Trying to princt a char */
-      	if (packet.keycode[0] > 0x1d & packet.keycode[0] < 0x28 )
+      	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x28) )
       	
       	{
       		if (packet.keycode[0] == 0x27){
