@@ -120,9 +120,15 @@ int main()
     	//fbputchar('*', 0, col);
     		fbputchar('*', 12, col);
   		}
+  		
   		fbputs("Hello CSEE 4840 World!", 4, 10);
 
       }
+      
+      if (packet.keycode[0] == 0x04) { /* ESC pressed? */
+			fbputchar("a", 14, 1);
+      }
+      
       if (packet.keycode[0] == 0x29) { /* ESC pressed? */
 	break;
       }
