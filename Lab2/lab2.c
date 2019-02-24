@@ -132,7 +132,7 @@ int main()
       	
       	{
       		if (packet.keycode[0] == 0x 27){
-      		char c = "0"
+      		char c = '0';
       		}
       		else{
       		char c  = packet.keycode[0] +19;
