@@ -105,13 +105,16 @@ int main()
     libusb_interrupt_transfer(keyboard, endpoint_address,
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
-    if (transferred == sizeof(packet)) {
-      sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
-	      packet.keycode[1]);
-      printf("%s\n", keystate);
-      fbputs(keystate, 6, 0);
+    
+      
+      
+      
       if (packet.keycode[0] == 0x2c) { /* space pressed? */
-		
+		if (transferred == sizeof(packet)) {
+      		sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
+	        packet.keycode[1]);
+      		printf("%s\n", keystate);
+      		fbputs(keystate, 6, 0);
 
 		for (col = 0 ; col < 64 ; col++) {
     	//fbputchar('*', 0, col);
