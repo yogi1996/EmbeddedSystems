@@ -160,19 +160,23 @@ int main()
       }
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
+      	fbputchar(' ',row1, col1);
       	col1 = col1 +1 ;
       	
       	}
       if (packet.keycode[0] == 0x50){
+      	fbputchar(' ',row1, col1);
       	col1 = col1 -1 ;
       	
       	}
       if (packet.keycode[0] == 0x52){
-      	row1 = row1 +1 ;
+      	fbputchar(' ',row1, col1);
+      	row1 = row1 -1 ;
       	
       	}
       if (packet.keycode[0] == 0x51){
-      	row1 = row1 -1 ;
+      	fbputchar(' ',row1, col1);
+      	row1 = row1 +1 ;
       	
       	}
       	
