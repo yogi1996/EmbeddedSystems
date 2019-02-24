@@ -135,7 +135,7 @@ int main()
       		
       		char c  = packet.keycode[0] +19;
       		if (packet.keycode[0] == 0x27){
-      			char c = '0';
+      			c = '0';
       		}
       		
 			fbputchar(c,row1, col1);
