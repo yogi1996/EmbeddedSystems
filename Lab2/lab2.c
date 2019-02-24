@@ -130,7 +130,7 @@ int main()
       if (packet.keycode[0]) { /* Trying to princt a char */
       	if (packet.keycode[0] > 0x1d)
       	{
-      		char c  = packet.keycode[0] +1;
+      		char c  = packet.keycode[0] +13;
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
