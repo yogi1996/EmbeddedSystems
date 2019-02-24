@@ -41,7 +41,7 @@ void *network_thread_f(void *);
 
 int main()
 {
-  int err, col;
+  int err, col,row;
 
   struct sockaddr_in serv_addr;
 
@@ -56,7 +56,7 @@ int main()
 	for (col = 0 ; col < 64 ; col++) {
 	for (row =0; row <24;row++)
     
-    fbputchar('', row, col);
+    fbputchar(' ', row, col);
   }
   /* Draw rows of asterisks across the top and bottom of the screen */
   for (col = 0 ; col < 64 ; col++) {
