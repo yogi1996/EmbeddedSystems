@@ -140,7 +140,7 @@ int main()
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
-			if (col1 == 64){
+			if (col1 > 63){
 			row1 = row1 +1 ;
 			col1 = 1;
       	}
@@ -150,7 +150,7 @@ int main()
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
-			if (col1 == 64){
+			if (col1 > 63){
 			row1 = row1 +1 ;
 			col1 = 1;
 			}
@@ -158,7 +158,23 @@ int main()
 			}
 			
       }
-      
+      fbputchar('_',row1,col1);
+      if (packet.keycode[0] == 0x4f){
+      	col1 = col1 +1 ;
+      	
+      	{
+      if (packet.keycode[0] == 0x50){
+      	col1 = col1 -1 ;
+      	
+      	{
+      if (packet.keycode[0] == 0x52){
+      	row1 = row1 +1 ;
+      	
+      	{
+      if (packet.keycode[0] == 0x51){
+      	row1 = row1 -1 ;
+      	
+      	{
       if (packet.keycode[0] == 0x29) { /* ESC pressed? */
 	break;
       }
