@@ -131,11 +131,11 @@ int main()
       	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x28) )
       	
       	{
-      		if (packet.keycode[0] == 0x27){
-      		char c = '0';
-      		}
-      		else{
+      		
+      		
       		char c  = packet.keycode[0] +19;
+      		if (packet.keycode[0] == 0x27){
+      			char c = '0';
       		}
       		
 			fbputchar(c,row1, col1);
