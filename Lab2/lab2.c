@@ -132,7 +132,7 @@ int main()
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
-			if (col1 == 24){
+			if (col1 == 64){
 			row1 = row1 +1 ;
 			col1 = 1;
 			}
