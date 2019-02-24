@@ -60,6 +60,10 @@ int main()
     fbputchar('*', 23, col);
   }
 
+	for (col = 0 ; col < 64 ; col++) {
+    //fbputchar('*', 0, col);
+    fbputchar('*', 12, col);
+  }
   fbputs("Hello CSEE 4840 World!", 4, 10);
 
   /* Open the keyboard */
