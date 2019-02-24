@@ -126,7 +126,7 @@ int main()
       }
       
       if (packet.keycode[0] == 0x04) { /* ESC pressed? */
-			fbputchar("a", 14, 1);
+			fbputchar('a', 14, 1);
       }
       
       if (packet.keycode[0] == 0x29) { /* ESC pressed? */
