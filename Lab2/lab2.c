@@ -138,6 +138,7 @@ int main()
 			row1 = row1 +1 ;
 			col1 = 1;
       	}
+      	}
       	else{
       		char c  = packet.keycode[0] + 93;
       		
