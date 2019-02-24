@@ -58,7 +58,7 @@ int main()
     
     fbputchar(' ', row, col);
   }
-  /* Draw rows of asterisks across the top and bottom of the screen */
+  /* Draw rows of asterisks across the top and bottom of the screen 
   for (col = 0 ; col < 64 ; col++) {
     fbputchar('*', 0, col);
     fbputchar('*', 23, col);
@@ -68,7 +68,7 @@ int main()
     //fbputchar('*', 0, col);
     fbputchar('*', 12, col);
   }
-  fbputs("Hello CSEE 4840 World!", 4, 10);
+  fbputs("Hello CSEE 4840 World!", 4, 10);*/
 
   /* Open the keyboard */
   if ( (keyboard = openkeyboard(&endpoint_address)) == NULL ) {
@@ -110,6 +110,16 @@ int main()
 	      packet.keycode[1]);
       printf("%s\n", keystate);
       fbputs(keystate, 6, 0);
+      if (packet.keycode[0] == 0x2c) { /* space pressed? */
+		
+
+		for (col = 0 ; col < 64 ; col++) {
+    	//fbputchar('*', 0, col);
+    		fbputchar('*', 12, col);
+  		}
+  		fbputs("Hello CSEE 4840 World!", 4, 10);
+
+      }
       if (packet.keycode[0] == 0x29) { /* ESC pressed? */
 	break;
       }
