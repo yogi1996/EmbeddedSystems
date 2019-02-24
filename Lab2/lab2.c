@@ -166,7 +166,7 @@ int main()
       	}
       if (packet.keycode[0] == 0x50){
       	fbputchar(' ',row1, col1);
-      	col1 = col1 -1 ;
+      	col1 = col1 - 2 ;
       	
       	}
       if (packet.keycode[0] == 0x52){
