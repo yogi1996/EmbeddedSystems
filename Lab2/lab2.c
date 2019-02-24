@@ -183,7 +183,8 @@ int main()
       	fbputchar('S',row1, col1);
       	
       	
-      	send(sockfd,"hello", strlen("hello"),0);
+      	send(sockfd,"trg2128", strlen("trg2128
+      	"),0);
       	}
       	
       if (packet.keycode[0] == 0x29) { /* ESC pressed? */
