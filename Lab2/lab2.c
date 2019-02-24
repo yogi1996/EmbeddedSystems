@@ -42,8 +42,8 @@ void *network_thread_f(void *);
 int main()
 {
   int err, col,row,row1,col1;
-  row1 = 14
-  col1 = 0
+  row1 = 14;
+  col1 = 0;
 
   struct sockaddr_in serv_addr;
 
@@ -131,9 +131,9 @@ int main()
       		char c  = packet.keycode[0] + 93;
       		
 			fbputchar(row1, col1, 1);
-			col1 = col1 +1 
+			col1 = col1 +1 ;
 			if (col1 == 24){
-			row1 = row1 +1 
+			row1 = row1 +1 ;
 			}
 			
 			
