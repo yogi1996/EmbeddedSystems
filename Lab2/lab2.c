@@ -189,7 +189,7 @@ int main()
       	if (packet.keycode[0] == 0x28){
       	fbputchar('S',row1, col1);
       	
-      	stringSend[m] = '\0';
+      	//stringSend[m] = '\0';
       	printf("%s",stringSend);
       	
       	sendRes = send(sockfd,stringSend, strlen(stringSend),0);
