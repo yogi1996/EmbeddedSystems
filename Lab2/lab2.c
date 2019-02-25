@@ -18,7 +18,7 @@
  * the chat server you are connecting to
  */
 /* micro36.ee.columbia.edu */
-#define SERVER_HOST "160.39.129.191"
+#define SERVER_HOST "160.39.202.255"
 #define SERVER_PORT 42000
 
 #define BUFFER_SIZE 128
@@ -45,7 +45,7 @@ int main()
   m=0;
   row1 = 14;
   col1 = 1;
-  char stringSend [800];
+  char stringSend [128];
   struct sockaddr_in serv_addr;
 
   struct usb_keyboard_packet packet;
