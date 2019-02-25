@@ -229,7 +229,7 @@ void *network_thread_f(void *ignored)
     recvBuf[n] = '\0';
     printf("%s", recvBuf);
     fbputs(recvBuf, netRow, 0);
-    netRow = netRow +1 
+    netRow = netRow +1 ;
     
     
     
