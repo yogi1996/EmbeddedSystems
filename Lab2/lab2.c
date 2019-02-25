@@ -22,7 +22,7 @@
 #define SERVER_PORT 42000
 
 #define BUFFER_SIZE 128
-int netRow=0;
+int netRow=1;
 int netCol=0;
 /*
  * References:
@@ -125,7 +125,7 @@ int main()
     		fbputchar('*', 12, col);
   		}
   		
-  		fbputs("Hello CSEE 4840 World!", 4, 10);
+  		fbputs("Hello CSEE 4840 World!", 0, 0);
 
       }
       
