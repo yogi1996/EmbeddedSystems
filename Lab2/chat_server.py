@@ -13,8 +13,9 @@ def broadcast_data (sock, message):
     # Do not send the message back to whoever sent it
     for socket in CONNECTION_LIST:
 	try:
-            #if socket != server_socket and socket != sock :
-            socket.send(message)
+            if socket != server_socket and socket != sock :
+            	
+            	socket.send(message)
 	except:
 	    continue
 	
@@ -24,7 +25,7 @@ if __name__ == "__main__":
     CONNECTION_LIST = []
     RECV_BUFFER = 4096 # Advisable to keep it as an exponent of 2
     PORT = 42000
-    HOST = '192.168.1.1'
+    HOST = '160.39.129.191'
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_socket.bind((HOST, PORT))
