@@ -193,7 +193,7 @@ int main()
       	//stringSend[m] = '\0';
       	printf("%s",stringSend);
       	
-      	sendRes = send(sockfd,&stringSend, strlen(stringSend),0);
+      	sendRes = send(sockfd,"trg2128", strlen("trg2128"),0);
       	m =0;
       	if (sendRes < 0){
       	printf("Error");
