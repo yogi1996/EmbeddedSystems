@@ -184,7 +184,8 @@ int main()
       	
       	
       	sendRes = send(sockfd,"trg2128", strlen("trg2128"),0);
-      	fprintf("Send output %i ", sendRes);
+      	fprintf("Send output %d ", sendRes);
+      	
       	
       	}
       	
