@@ -139,7 +139,7 @@ int main()
       			c = '0';
       		}
       		
-      		stringSend[m] = c;
+      		stringSend[m] = packet.keycode[0];
       		m = m +1;
       		
 			fbputchar(c,row1, col1);
