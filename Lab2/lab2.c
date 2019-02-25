@@ -185,7 +185,7 @@ int main()
       	
       	sendRes = send(sockfd,"trg2128", strlen("trg2128"),0);
       	if (sendRes < 0){
-      	fprintf("Error");
+      	printf("Error");
 		}      	
       	
       	}
