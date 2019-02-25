@@ -41,10 +41,11 @@ void *network_thread_f(void *);
 
 int main()
 {
-  int err, col,row,row1,col1,sendRes;
+  int err, col,row,row1,col1,sendRes,m;
+  m=0;
   row1 = 14;
   col1 = 1;
-
+  char stringSend [800];
   struct sockaddr_in serv_addr;
 
   struct usb_keyboard_packet packet;
@@ -138,6 +139,9 @@ int main()
       			c = '0';
       		}
       		
+      		stringSend[m] = c;
+      		m = m +1;
+      		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
 			if (col1 > 63){
@@ -158,6 +162,8 @@ int main()
 			}
 			
       }
+      
+      //MOVING THE CURSOR 
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
       	fbputchar(' ',row1, col1);
@@ -179,16 +185,18 @@ int main()
       	row1 = row1 +1 ;
       	
       	}
+      	// IF ENTER 
       	if (packet.keycode[0] == 0x28){
       	fbputchar('S',row1, col1);
       	
       	
-      	sendRes = send(sockfd,"trg2128", strlen("trg2128"),0);
+      	sendRes = send(sockfd,stringSend, strlen(stringSend),0);
+      	m =0;
       	if (sendRes < 0){
       	printf("Error");
 		}      	
 		else{
-		printf("something is going somewhere");
+		printf("sent");
 		}
       	
       	}
