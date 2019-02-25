@@ -187,6 +187,9 @@ int main()
       	if (sendRes < 0){
       	printf("Error");
 		}      	
+		else{
+		printf("something is going somewhere");
+		}
       	
       	}
       	
