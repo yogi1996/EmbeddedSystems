@@ -22,7 +22,8 @@
 #define SERVER_PORT 42000
 
 #define BUFFER_SIZE 128
-
+int netRow=0;
+int netCol=0;
 /*
  * References:
  *
@@ -227,7 +228,10 @@ void *network_thread_f(void *ignored)
   while ( (n = read(sockfd, &recvBuf, BUFFER_SIZE - 1)) > 0 ) {
     recvBuf[n] = '\0';
     printf("%s", recvBuf);
-    fbputs(recvBuf, 8, 0);
+    fbputs(recvBuf, netRow, 0);
+    netRow = netRow +1 
+    
+    
     
   }
   
