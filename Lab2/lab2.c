@@ -41,7 +41,7 @@ void *network_thread_f(void *);
 
 int main()
 {
-  int err, col,row,row1,col1;
+  int err, col,row,row1,col1,sendRes;
   row1 = 14;
   col1 = 1;
 
@@ -183,7 +183,9 @@ int main()
       	fbputchar('S',row1, col1);
       	
       	
-      	send(sockfd,"trg2128", strlen("trg2128"),0);
+      	sendRes = send(sockfd,"trg2128", strlen("trg2128"),0);
+      	fprintf("Send output %i ", sendRes);
+      	
       	}
       	
       if (packet.keycode[0] == 0x29) { /* ESC pressed? */
