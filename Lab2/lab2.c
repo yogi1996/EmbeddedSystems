@@ -159,7 +159,7 @@ int main()
       					firstkey = packet.keycode[0];
 if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
 
-printf("SHIFT IS PRESSED");
+printf("SHIFT IS PRESSED %x", packet.keycode[0]);
 /*Capital letters*/
 if (firstkey >= 4 && firstkey <= 29) {
 					firstkey += 61;
