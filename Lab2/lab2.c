@@ -205,6 +205,7 @@ char c  = firstkey;
 
 				
 				}
+				}
 	else{
       		
       		char c  = packet.keycode[0] +19;
