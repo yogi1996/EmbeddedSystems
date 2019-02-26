@@ -357,13 +357,16 @@ else {
       //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
-      	fbputchar(' ',row1, col1);
-      	col1 = col1 +1 ;
+      	//fbputchar(' ',row1, col1);
+      	//m=m-1;
+      	//stringSend[m] = '\0';
+      	
+      	//col1 = col1 +1 ;
       	
       	}
       	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
-      	fbputchar(' ',row1, col1);
+      	//fbputchar(' ',row1, col1);
       	col1 = col1 - 2 ;
       	
       	}
