@@ -322,7 +322,7 @@ else {
       	fbputchar(' ',row1, col1);
       	printf("Before %d/n",m);
       	
-      	m = m-1;
+      	m = m-2;
       	printf("After %d/n",m);
       	col1 = col1 - 2;
       	if(col1 == 0){
