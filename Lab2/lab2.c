@@ -145,6 +145,8 @@ int main()
       	
       		printf("WE ARE HERE");
       		
+      		if (packet.keycode[0]>2c){
+      		
       		switch(shiftKey) {
 						
 						case 44: shiftKey = ' ';
@@ -186,6 +188,7 @@ int main()
 			if (col1 > 63){
 			row1 = row1 +1 ;
 			col1 = 1;
+			}
 			}
       		
       		if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
