@@ -228,7 +228,7 @@ char c  = shiftKey;
 			}*/
 			if ( packet.keycode[0]>= 30 && packet.keycode[0] <= 38){
 			
-					shiftKey += 19;
+					shiftKey = packet.keycode[0];
 					
 					switch(shiftKey) {
 
