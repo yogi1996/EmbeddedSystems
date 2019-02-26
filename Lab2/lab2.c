@@ -357,15 +357,15 @@ else {
 		}      	
 		else{
 			printf("sent");
-			for (netCol = 0 ; col1 < 64 ; netCol++) {
-    			for (netRow = 21;row1<23;netRow++){
+			//for (netCol = 0 ; col1 < 64 ; netCol++) {
+    			//for (netRow = 21;row1<23;netRow++){
     				//fbputchar('*', 0, col);
-    				fbputchar(' ', row1, col1);
+    				//fbputchar(' ', row1, col1);
     				
-    			}
-  			}
-  			row1 = 21;
-  			col = 0;
+    			//}
+  			//}
+  			//row1 = 21;
+  			//col = 0;
 		
 		}
       	
