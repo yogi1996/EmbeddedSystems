@@ -419,7 +419,9 @@ else {
       	
       	// IF ENTER 
       	if (packet.keycode[0] == 0x28){
-      	
+      	if (m>=n){
+  			n = m;
+  			}
       	fbputchar('S',row1, col1);
       	printf("This is m: %d",m);
       	//m=m-1;
