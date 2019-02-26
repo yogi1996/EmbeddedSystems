@@ -335,6 +335,7 @@ char c  = shiftKey;
 						col1 = 1;
 					}
 			}
+			int m =n;
 else {
       	
       		//LOWER 
@@ -359,7 +360,7 @@ else {
       if (packet.keycode[0] == 0x4f){
       	fbputchar(' ',row1, col1);
       	m=m-1;
-      	stringSend[m] = '\0';
+      	//stringSend[m] = '\0';
       	fbputs(stringSend,21,1);
       	m = m+1;
       	
