@@ -201,7 +201,7 @@ break;
 char c  = shiftKey;
       		
       		stringSend[m] = c;
-      		printf("%s",stringSend);
+      		printf("HERE:%s",stringSend);
       		m = m +1;
       		
 			fbputchar(c,row1, col1);
