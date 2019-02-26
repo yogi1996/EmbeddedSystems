@@ -366,6 +366,7 @@ else {
       	int  z = n;
       	stringSend[z] = '\0';
       	fbputs(stringSend,21,1);
+      	stringSend[z] = ' ';
       	m = m+1;
       	
       	//col1 = col1 +1 ;
@@ -378,6 +379,7 @@ else {
       	int z1 =n;
       	stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
+      	stringSend[z1] = ' ';
       	m=m-1;
       	}
       	// THIS IS NOW BACKSPACE KEY
