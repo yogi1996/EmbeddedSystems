@@ -206,7 +206,7 @@ char c  = shiftKey;
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
-			if (col1 > 63){
+			if (col1 > 62){
 			row1 = row1 +1 ;
 			col1 = 1;
 
@@ -280,7 +280,7 @@ char c  = shiftKey;
       				m = m +1;
 					fbputchar(c,row1, col1);
 					col1 = col1 +1 ;
-					if (col1 > 63){
+					if (col1 > 62){
 						row1 = row1 +1 ;
 						col1 = 1;
 					}
@@ -295,7 +295,7 @@ else {
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
-			if (col1 > 63){
+			if (col1 > 62){
 			row1 = row1 +1 ;
 			col1 = 1;
 			}
@@ -322,7 +322,7 @@ else {
       	col1 = col1 - 2;
       	if(col1 == 0){
       		row1 = row1 -1;
-      		col1 = 63;
+      		col1 = 62;
       	}
       	
       	}
