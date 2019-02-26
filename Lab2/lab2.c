@@ -356,6 +356,7 @@ else {
       	if (packet.keycode[0] == 0x28){
       	fbputchar('S',row1, col1);
       	printf("This is m: %d",m);
+      	m=m-1;
       	stringSend[m] = '\0';
       	printf("%s",stringSend);
       	
