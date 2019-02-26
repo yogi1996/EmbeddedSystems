@@ -175,7 +175,7 @@ int main()
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
-      	col1 = col1 - 1;
+      	col1 = col1 - 2;
       	
       	}
       if (packet.keycode[0] == 0x52){
