@@ -138,7 +138,7 @@ int main()
       if (packet.keycode[0]) { /* NUMBERS */
       
       
-      	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x39) & ( packet.keycode[0] != 0x2C) & ( packet.keycode[0] != 0x2A))
+      	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x39) & ( packet.keycode[0] != 0x2C) & ( packet.keycode[0] != 0x2A)( packet.keycode[0] != 0x28))
       	
       	{
       		
@@ -337,6 +337,7 @@ else {
       	printf("%s",stringSend);
       	
       	sendRes = send(sockfd,stringSend, m-1,0);
+      	
       	m =0;
       	if (sendRes < 0){
       	printf("Error");
@@ -346,6 +347,7 @@ else {
 		}
       	
       	}
+      	
       	
       if (packet.keycode[0] == 0x29) { /* ESC pressed? */
 	break;
