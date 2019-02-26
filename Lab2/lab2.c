@@ -132,7 +132,7 @@ int main()
       }
       shiftKey = packet.keycode[0];
       if (packet.keycode[0]) { /* NUMBERS */
-      	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x38) )
+      	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x39) )
       	
       	{
       		
