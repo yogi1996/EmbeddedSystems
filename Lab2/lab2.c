@@ -335,7 +335,7 @@ char c  = shiftKey;
 						col1 = 1;
 					}
 			}
-			int m =n;
+			//int m =n;
 else {
       	
       		//LOWER 
