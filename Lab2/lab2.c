@@ -43,8 +43,9 @@ void *network_thread_f(void *);
 
 int main()
 {
+
   char shiftKey;
-  int err, col,row,row1,col1,sendRes,m;
+  int err, col,row,row1,col1,sendRes,m,n;
   m=0;
   row1 = 21;
   col1 = 1;
@@ -108,6 +109,9 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
+  	if (m>n){
+  	n = m;
+  	}
     libusb_interrupt_transfer(keyboard, endpoint_address,
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
@@ -415,12 +419,14 @@ else {
       	fbputchar('S',row1, col1);
       	printf("This is m: %d",m);
       	m=m-1;
+      	n =n -1;
       	stringSend[m] = '\0';
       	printf("%s",stringSend);
       	
-      	sendRes = send(sockfd,stringSend, m,0);
+      	sendRes = send(sockfd,stringSend, n,0);
       	
       	m =0;
+      	n=0;
       	
       	if (sendRes < 0){
       	printf("Error");
