@@ -321,8 +321,8 @@ else {
       	fbputchar(' ',row1, col1);
       	col1 = col1 - 2;
       	if(col1 == 0){
-      	row1 = row1 -1;
-      	col1 = 63;
+      		row1 = row1 -1;
+      		col1 = 62;
       	}
       	
       	}
