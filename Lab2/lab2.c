@@ -332,10 +332,10 @@ else {
       		col1 = 62;
       	}
       	
-      	if ((row1 == 21)& (col1 == 0)){
+      	/*if ((row1 == 21)& (col1 == 0)){
       		row1=21;
       		col1 = 0;
-      	}
+      	}*/
       	
       	}
       
@@ -368,14 +368,14 @@ else {
 		}      	
 		else{
 			printf("sent");
-			/*for (row1 = 21;row1<23;row1++){
+			for (row1 = 21;row1<23;row1++){
 				for (col1 = 0 ; col1 < 64 ; col1++) {
     			
     				//fbputchar('*', 0, col);
     				fbputchar(' ', row1, col1);
     				
     			}
-  			}*/
+  			}
   			row1 = 21;
   			col1 = 0;
 		
