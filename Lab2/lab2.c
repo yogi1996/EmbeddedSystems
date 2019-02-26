@@ -357,8 +357,8 @@ else {
 		}      	
 		else{
 			printf("sent");
-			for (netRow = 21;row1<23;netRow++){
-				for (netCol = 0 ; col1 < 64 ; netCol++) {
+			for (row1 = 21;row1<23;row1++){
+				for (col1 = 0 ; col1 < 64 ; col1++) {
     			
     				//fbputchar('*', 0, col);
     				fbputchar(' ', row1, col1);
