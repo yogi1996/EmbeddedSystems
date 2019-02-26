@@ -211,30 +211,48 @@ char c  = shiftKey;
 				}
 				}
 	else{
-			if (packet.keycode[0] == 0x2c){
+			if ((packet.keycode[0] <0x2a) | (packet.keycode[0] >0x2d) ){
+			/*
 			fbputchar(' ',row1, col1);
 			col1 = col1 +1 ;
 			if (col1 > 63){
 			row1 = row1 +1 ;
 			col1 = 1;
-			}
-			continue;
-			}
+			}*/
+			
+			char c  = packet.keycode[0] +19;
+      			if (packet.keycode[0] == 0x27){
+      				c = '0';
+      			}
       		
-      		char c  = packet.keycode[0] +19;
-      		if (packet.keycode[0] == 0x27){
-      			c = '0';
-      		}
-      		
-      		stringSend[m] = packet.keycode[0];
-      		m = m +1;
-      		
-			fbputchar(c,row1, col1);
-			col1 = col1 +1 ;
-			if (col1 > 63){
-			row1 = row1 +1 ;
-			col1 = 1;
+      			stringSend[m] = packet.keycode[0];
+      			m = m +1;
+      			
+				fbputchar(c,row1, col1);
+				col1 = col1 +1 ;
+				f (col1 > 63){
+				row1 = row1 +1 ;
+				col1 = 1;
+				}
+			
 			}
+      		/*else{
+      		
+      			char c  = packet.keycode[0] +19;
+      			if (packet.keycode[0] == 0x27){
+      				c = '0';
+      			}
+      		
+      			stringSend[m] = packet.keycode[0];
+      			m = m +1;
+      			
+				fbputchar(c,row1, col1);
+				col1 = col1 +1 ;
+				f (col1 > 63){
+				row1 = row1 +1 ;
+				col1 = 1;
+				}
+				}*/
 			
       	}
       	}
