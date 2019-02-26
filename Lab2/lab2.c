@@ -200,7 +200,7 @@ break;
 				}
 char c  = shiftKey;
       		
-      		stringSend[m] = packet.keycode[0];
+      		stringSend[m] = c;
       		m = m +1;
       		
 			fbputchar(c,row1, col1);
@@ -227,7 +227,7 @@ char c  = shiftKey;
       				c = '0';
       			}
       		
-      			stringSend[m] = packet.keycode[0];
+      			stringSend[m] = c;
       			m = m +1;
       			
 				fbputchar(c,row1, col1);
@@ -339,6 +339,7 @@ else {
       	sendRes = send(sockfd,stringSend, m-1,0);
       	
       	m =0;
+      	
       	if (sendRes < 0){
       	printf("Error");
 		}      	
