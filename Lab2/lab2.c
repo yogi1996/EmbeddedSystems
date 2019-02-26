@@ -215,6 +215,8 @@ break;
 default: firstkey= '0';
 break;
 				}
+printf("HERE");
+
 char c = firstkey;
 fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
