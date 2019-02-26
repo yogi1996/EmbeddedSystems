@@ -226,11 +226,12 @@ char c  = shiftKey;
 			row1 = row1 +1 ;
 			col1 = 1;
 			}*/
-			if (shiftKey >= 30 && shiftKey <= 38){
+			if ( packet.keycode[0]>= 30 && packet.keycode[0] <= 38){
+			
 					shiftKey += 19;
+					
 					switch(shiftKey) {
-						case 39: shiftKey = '0';
-										 break;
+
 						case 44: shiftKey = ' ';
 										 break;
 						case 45: shiftKey = '-';
@@ -262,7 +263,7 @@ char c  = shiftKey;
 										 }
 			else{
 					
-			shiftKey = packet.keycode[0] +19;
+				shiftKey = packet.keycode[0] +19;
 			}
 			
 			char c = shiftKey;
