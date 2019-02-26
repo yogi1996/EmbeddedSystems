@@ -44,7 +44,7 @@ int main()
 {
   int err, col,row,row1,col1,sendRes,m;
   m=0;
-  row1 = 14;
+  row1 = 22;
   col1 = 1;
   char stringSend [128];
   struct sockaddr_in serv_addr;
@@ -122,14 +122,14 @@ int main()
 
 		for (col = 0 ; col < 64 ; col++) {
     	//fbputchar('*', 0, col);
-    		fbputchar('*', 12, col);
+    		fbputchar('*', 21, col);
   		}
   		
   		fbputs("Hello CSEE 4840 World!", 0, 0);
 
       }
       
-      if (packet.keycode[0]) { /* Trying to princt a char */
+      if (packet.keycode[0]) { /* NUMBERS */
       	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x28) )
       	
       	{
@@ -150,6 +150,7 @@ int main()
 			col1 = 1;
       	}
       	}
+      	else if{}
       	else{
       		char c  = packet.keycode[0] + 93;
       		
