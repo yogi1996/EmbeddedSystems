@@ -190,7 +190,7 @@ case 54: shiftKey = '<';
 break;
 case 55: shiftKey = '>';
 break;
-case 56: shiftKey = '?';
+case 56: shiftKey = 'H';
 break;
 default: shiftKey= '0';
 break;
