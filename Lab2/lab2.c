@@ -200,7 +200,7 @@ break;
 
 				}
 char c  = shiftKey;
-char c  = key;
+//char c  = key;
       		
       		stringSend[m] = c;
       		printf("HERE:%s",stringSend);
@@ -226,7 +226,7 @@ char c  = key;
 			row1 = row1 +1 ;
 			col1 = 1;
 			}*/
-			if (shiftKey >= 30 && shiftKey <= 38)
+			if (shiftKey >= 30 && shiftKey <= 38){
 					shiftKey += 19;
 					switch(shiftKey) {
 						case 39: shiftKey = '0';
@@ -258,12 +258,14 @@ char c  = key;
 						case 0: break;
 						default: shiftKey = '0';
 										 break;
+										 }
+										 }
 			else{
 					
 			shiftKey = packet.keycode[0] +19;
 			}
 			
-			char c = shiftKey
+			char c = shiftKey;
       			if (packet.keycode[0] == 0x27){
       				c = '0';
       			}
