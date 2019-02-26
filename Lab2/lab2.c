@@ -391,7 +391,7 @@ void *network_thread_f(void *ignored)
     if (netRow == 19){
     //Clear the table 
     for (netCol = 0 ; netCol < 64 ; netCol++) {
-    	for (netRow = 0;netRow<23;netRow++){
+    	for (netRow = 0;netRow<20;netRow++){
     	//fbputchar('*', 0, col);
     		fbputchar(' ', row, col);
     		}
