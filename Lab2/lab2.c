@@ -145,7 +145,7 @@ int main()
       	
       		printf("WE ARE HERE");
       		
-      		if (packet.keycode[0]>2c){
+      		if (packet.keycode[0]>0x2c){
       		
       		switch(shiftKey) {
 						
