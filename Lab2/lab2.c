@@ -425,9 +425,9 @@ else {
       	printf("%s",stringSend);
       	
       	sendRes = send(sockfd,stringSend, n,0);
-      	stringSend [128] = {' '};
-      	m =0;
-      	n=0;
+      	//stringSend [128] = {' '};
+      	m = 0;
+      	n = 0;
       	
       	if (sendRes < 0){
       	printf("Error");
