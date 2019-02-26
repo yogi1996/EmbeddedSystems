@@ -329,8 +329,9 @@ else {
       		row1 = row1 -1;
       		col1 = 62;
       	}
-      	if (row1 == 21){
-      	row1=21;
+      	
+      	if (row1 == 20){
+      	row1=20;
       	}
       	
       	}
