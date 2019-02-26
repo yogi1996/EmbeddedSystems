@@ -47,7 +47,7 @@ int main()
   char shiftKey;
   int err, col,row,row1,col1,sendRes,m,n;
   m=0;
-  n=0;
+  //n=0;
   row1 = 21;
   col1 = 1;
   char stringSend [128] = {' '};
