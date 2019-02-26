@@ -166,9 +166,9 @@ if (firstkey >= 4 && firstkey <= 29) {
 				}
 else{
 
-// DO WE ALSO HAVE TO DO KEYPAD?
+// some other char
 switch(firstkey) {
-case 1e: firstkey = '!';  
+case 30: firstkey = '!';  
 break;
 case 31: firstkey = '@';
 break;
