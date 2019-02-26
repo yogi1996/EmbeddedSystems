@@ -212,7 +212,7 @@ break;
 default: firstkey= '0';
 break;
 				}
-c = firstkey;
+char c = firstkey;
 fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
 			if (col1 > 63){
