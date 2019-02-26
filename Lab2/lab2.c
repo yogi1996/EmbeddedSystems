@@ -150,7 +150,7 @@ int main()
 			col1 = 1;
       	}
       	}
-      	else if{}
+      	//else if{}
       	else{
       		char c  = packet.keycode[0] + 93;
       		
