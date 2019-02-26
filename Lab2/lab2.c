@@ -43,7 +43,7 @@ void *network_thread_f(void *);
 
 int main()
 {
-  char firstkey;
+  char shiftKey;
   int err, col,row,row1,col1,sendRes,m;
   m=0;
   row1 = 21;
@@ -130,7 +130,7 @@ int main()
   		fbputs("Hello CSEE 4840 World!", 0, 0);
 
       }
-      firstkey = packet.keycode[0];
+      shiftKey = packet.keycode[0];
       if (packet.keycode[0]) { /* NUMBERS */
       	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x28) )
       	
@@ -143,56 +143,56 @@ int main()
 				
 
 // some other char
-switch(firstkey) {
-case 30: firstkey = '!';  
+switch(shiftKey) {
+case 30: shiftKey = '!';  
 break;
-case 31: firstkey = '@';
+case 31: shiftKey = '@';
 break;
-case 32: firstkey = '#';
+case 32: shiftKey = '#';
 break;
-case 33: firstkey = '$';
+case 33: shiftKey = '$';
 break;
-case 34: firstkey = '%';
+case 34: shiftKey = '%';
 break;
-case 35: firstkey = '^';
+case 35: shiftKey = '^';
 break;
-case 36: firstkey = '&';
+case 36: shiftKey = '&';
 break;
-case 37: firstkey = '*';
+case 37: shiftKey = '*';
 break;
-case 38: firstkey = '(';
+case 38: shiftKey = '(';
 break;
-case 39: firstkey = ')';
+case 39: shiftKey = ')';
 break;
-case 44: firstkey = ' ';
+case 44: shiftKey = ' ';
 break;
-case 45: firstkey = '_';
+case 45: shiftKey = '_';
 break;
-case 46: firstkey = '+';
+case 46: shiftKey = '+';
 break;
-case 47: firstkey = '{';
+case 47: shiftKey = '{';
 break;
-case 48: firstkey = '}';
+case 48: shiftKey = '}';
 break;
-case 49: firstkey = '|';
+case 49: shiftKey = '|';
 break;
-case 51: firstkey = ':';
+case 51: shiftKey = ':';
 break;
-case 52: firstkey = '"';
+case 52: shiftKey = '"';
 break;
-case 53: firstkey = '~';
+case 53: shiftKey = '~';
 break;
-case 54: firstkey = '<';
+case 54: shiftKey = '<';
 break;
-case 55: firstkey = '>';
+case 55: shiftKey = '>';
 break;
-case 56: firstkey = '?';
+case 56: shiftKey = '?';
 break;
-default: firstkey= '0';
+default: shiftKey= '0';
 break;
 
 				}
-char c  = firstkey;
+char c  = shiftKey;
       		
       		stringSend[m] = packet.keycode[0];
       		m = m +1;
@@ -229,18 +229,18 @@ char c  = firstkey;
       	//  ALPH
       	else{
       		// UPPER 
-      					//firstkey = packet.keycode[0];
+      					//shiftKey = packet.keycode[0];
 if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
 
 printf("SHIFT IS PRESSED %x", packet.keycode[0]);
 /*Capital letters*/
-if (firstkey >= 4 && firstkey <= 29) {
-					firstkey += 61;
+if (shiftKey >= 4 && shiftKey <= 29) {
+					shiftKey += 61;
 				}
 
 printf("HERE");
 
-char c = firstkey;
+char c = shiftKey;
 fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
 			if (col1 > 63){
