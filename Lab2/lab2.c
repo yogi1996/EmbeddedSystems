@@ -109,7 +109,7 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
-  	if (m>n){
+  	if (m>=n){
   	n = m;
   	}
     libusb_interrupt_transfer(keyboard, endpoint_address,
