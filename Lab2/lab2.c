@@ -397,7 +397,7 @@ void *network_thread_f(void *ignored)
     		}
   		}
     netRow = 1;
-    netcol = 0;
+    netCol = 0;
     
     }
     
