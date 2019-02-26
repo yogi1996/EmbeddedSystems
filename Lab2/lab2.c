@@ -209,9 +209,16 @@ case 55: firstkey = '>';
 break;
 case 56: firstkey = '?';
 break;
-default: 1;
+default: firstkey= '0';
 break;
-					}
+				}
+c = firstkey;
+fbputchar(c,row1, col1);
+			col1 = col1 +1 ;
+			if (col1 > 63){
+			row1 = row1 +1 ;
+			col1 = 1;
+			}
 				}
 			}
 else {
