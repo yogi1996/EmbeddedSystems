@@ -381,7 +381,7 @@ else {
       	stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
       	stringSend[z1] = ' ';
-      	m=m-2;
+      	m=m-1;
       	}
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
