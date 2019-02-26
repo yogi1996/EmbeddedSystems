@@ -136,7 +136,9 @@ int main()
       }
       shiftKey = packet.keycode[0];
       if (packet.keycode[0]) { /* NUMBERS */
-      	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x39) )
+      
+      
+      	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x27) )
       	
       	{
       		
@@ -261,23 +263,23 @@ char c  = shiftKey;
       	else{
       		// UPPER 
       					//shiftKey = packet.keycode[0];
-if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
+			if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
 
-printf("SHIFT IS PRESSED %x", packet.keycode[0]);
-/*Capital letters*/
-if (shiftKey >= 4 && shiftKey <= 29) {
-					shiftKey += 61;
-				}
+					printf("SHIFT IS PRESSED %x", packet.keycode[0]);
+					/*Capital letters*/
+					if (shiftKey >= 4 && shiftKey <= 29) {
+						shiftKey += 61;
+						}
 
-printf("HERE");
+					printf("HERE");
 
-char c = shiftKey;
-fbputchar(c,row1, col1);
-			col1 = col1 +1 ;
-			if (col1 > 63){
-			row1 = row1 +1 ;
-			col1 = 1;
-			}
+					char c = shiftKey;
+					fbputchar(c,row1, col1);
+					col1 = col1 +1 ;
+					if (col1 > 63){
+						row1 = row1 +1 ;
+						col1 = 1;
+					}
 			}
 else {
       	
