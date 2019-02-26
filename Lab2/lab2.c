@@ -388,10 +388,10 @@ void *network_thread_f(void *ignored)
     printf("%s", recvBuf);
     fbputs(recvBuf, netRow, 0);
     netRow = netRow +1 ;
-    if (netRow == 20){
+    if (netRow == 21){
     //Clear the table 
     for (netCol = 0 ; netCol < 64 ; netCol++) {
-    	for (netRow = 0;netRow<21;netRow++){
+    	for (netRow = 0;netRow<22;netRow++){
     	//fbputchar('*', 0, col);
     		fbputchar(' ', netRow, netCol);
     		}
