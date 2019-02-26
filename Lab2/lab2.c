@@ -145,7 +145,7 @@ int main()
       	
       		printf("WE ARE HERE");
       		
-      		if (packet.keycode[0]>0x2c){
+      		if ((packet.keycode[0]>0x2c) & ~( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT )){
       		
       		switch(shiftKey) {
 						
