@@ -416,6 +416,7 @@ else {
       	
       	// IF ENTER 
       	if (packet.keycode[0] == 0x28){
+      	
       	fbputchar('S',row1, col1);
       	printf("This is m: %d",m);
       	m=m-1;
@@ -424,7 +425,7 @@ else {
       	printf("%s",stringSend);
       	
       	sendRes = send(sockfd,stringSend, n,0);
-      	
+      	stringSend [128] = {' '};
       	m =0;
       	n=0;
       	
