@@ -44,7 +44,7 @@ int main()
 {
   int err, col,row,row1,col1,sendRes,m;
   m=0;
-  row1 = 22;
+  row1 = 21;
   col1 = 1;
   char stringSend [128];
   struct sockaddr_in serv_addr;
@@ -122,7 +122,7 @@ int main()
 
 		for (col = 0 ; col < 64 ; col++) {
     	//fbputchar('*', 0, col);
-    		fbputchar('*', 21, col);
+    		fbputchar('*', 20, col);
   		}
   		
   		fbputs("Hello CSEE 4840 World!", 0, 0);
@@ -172,9 +172,10 @@ int main()
       	col1 = col1 +1 ;
       	
       	}
-      if (packet.keycode[0] == 0x50){
+      	// THIS IS NOW BACKSPACE KEY
+      if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
-      	col1 = col1 - 2 ;
+      	col1 = col1 - 1;
       	
       	}
       if (packet.keycode[0] == 0x52){
