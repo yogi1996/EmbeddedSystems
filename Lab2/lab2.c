@@ -363,7 +363,7 @@ else {
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
       	fbputchar(' ',row1, col1);
-      	int  z =n-1;
+      	int  z = n;
       	stringSend[z] = '\0';
       	fbputs(stringSend,21,1);
       	m = m+1;
