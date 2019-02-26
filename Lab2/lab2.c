@@ -398,7 +398,8 @@ void *network_thread_f(void *ignored)
   		}
     netRow = 1;
     netCol = 0;
-    
+    fbputs(recvBuf, netRow, 0);
+    netRow = 2;
     }
     
     
