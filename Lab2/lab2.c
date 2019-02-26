@@ -422,8 +422,8 @@ else {
       	fbputchar('S',row1, col1);
       	printf("This is m: %d",m);
       	m=m-1;
-      	n =n -1;
-      	stringSend[m] = '\0';
+      	n =n-1;
+      	stringSend[n] = '\0';
       	printf("%s",stringSend);
       	
       	sendRes = send(sockfd,stringSend, n,0);
