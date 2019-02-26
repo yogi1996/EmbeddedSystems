@@ -363,7 +363,7 @@ else {
       //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
-      	fbputchar(' ',row1, col1);
+      	//fbputchar(' ',row1, col1);
       	//int  z = n;
       	//stringSend[z] = '\0';
       	fbputs(stringSend,21,1);
@@ -375,7 +375,7 @@ else {
       	}
       	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
-      	fbputchar(' ',row1, col1);
+      	//fbputchar(' ',row1, col1);
       	col1 = col1 - 2 ;
       	//int z1 =n;
       	//stringSend[z1] = '\0';
