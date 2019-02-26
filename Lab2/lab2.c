@@ -212,6 +212,11 @@ char c  = shiftKey;
 				}
 	else{
 			if (packet.keycode[0] == 0x2c){
+			fbputchar(' ',row1, col1);
+			col1 = col1 +1 ;
+			if (col1 > 63){
+			row1 = row1 +1 ;
+			col1 = 1;
 			continue;
 			}
       		
