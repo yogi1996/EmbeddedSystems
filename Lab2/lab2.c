@@ -158,11 +158,14 @@ int main()
       		// UPPER 
       					firstkey = packet.keycode[0];
 if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
+
+printf("SHIFT IS PRESSED");
 /*Capital letters*/
 if (firstkey >= 4 && firstkey <= 29) {
 					firstkey += 61;
 				}
 else{
+
 // DO WE ALSO HAVE TO DO KEYPAD?
 switch(firstkey) {
 case 30: firstkey = '!';  
