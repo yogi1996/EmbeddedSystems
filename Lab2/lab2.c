@@ -168,7 +168,7 @@ else{
 
 // DO WE ALSO HAVE TO DO KEYPAD?
 switch(firstkey) {
-case 30: firstkey = '!';  
+case 1e: firstkey = '!';  
 break;
 case 31: firstkey = '@';
 break;
