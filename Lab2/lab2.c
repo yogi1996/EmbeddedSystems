@@ -47,6 +47,7 @@ int main()
   char shiftKey;
   int err, col,row,row1,col1,sendRes,m,n;
   m=0;
+  n=0;
   row1 = 21;
   col1 = 1;
   char stringSend [128] = {' '};
@@ -427,6 +428,10 @@ else {
       	printf("%s",stringSend);
       	
       	sendRes = send(sockfd,stringSend, n,0);
+      	
+      	for (i = 0; i<m;i++){
+      	stringSend[n] = ' ';
+      	}
       	//stringSend [128] = {' '};
       	m = 0;
       	n = 0;
@@ -436,6 +441,8 @@ else {
 		}      	
 		else{
 			printf("sent");
+			
+			
 			for (row1 = 21;row1<23;row1++){
 				for (col1 = 0 ; col1 < 64 ; col1++) {
     			
