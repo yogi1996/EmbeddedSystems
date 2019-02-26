@@ -150,8 +150,71 @@ int main()
 			col1 = 1;
       	}
       	}
-      	//else if{}
+      	
+      	//  ALPH
       	else{
+      		// UPPER 
+      					firstkey = packet.keycode[0];
+if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
+/*Capital letters*/
+if (firstkey >= 4 && firstkey <= 29) {
+					firstkey += 61;
+				}
+else{
+// DO WE ALSO HAVE TO DO KEYPAD?
+switch(firstkey) {
+case 30: firstkey = '!';  
+break;
+case 31: firstkey = '@';
+break;
+case 32: firstkey = '#';
+break;
+case 33: firstkey = '$';
+break;
+case 34: firstkey = '%';
+break;
+case 35: firstkey = '^';
+break;
+case 36: firstkey = '&';
+break;
+case 37: firstkey = '*';
+break;
+case 38: firstkey = '(';
+break;
+case 39: firstkey = ')';
+break;
+case 44: firstkey = ' ';
+break;
+case 45: firstkey = '_';
+break;
+case 46: firstkey = '+';
+break;
+case 47: firstkey = '{';
+break;
+case 48: firstkey = '}';
+break;
+case 49: firstkey = '|';
+break;
+case 51: firstkey = ':';
+break;
+case 52: firstkey = '"';
+break;
+case 53: firstkey = '~';
+break;
+case 54: firstkey = '<';
+break;
+case 55: firstkey = '>';
+break;
+case 56: firstkey = '?';
+break;
+default: is_ascii = 0;
+break;
+					}
+				}
+			}
+else {
+      	
+      		//LOWER 
       		char c  = packet.keycode[0] + 93;
       		
 			fbputchar(c,row1, col1);
@@ -160,16 +223,21 @@ int main()
 			row1 = row1 +1 ;
 			col1 = 1;
 			}
-			
+			}
 			}
 			
       }
       
-      //MOVING THE CURSOR 
+      //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
       	fbputchar(' ',row1, col1);
       	col1 = col1 +1 ;
+      	
+      	}
+      	if (packet.keycode[0] == 0x50){
+      	fbputchar(' ',row1, col1);
+      	col1 = col1 - 2 ;
       	
       	}
       	// THIS IS NOW BACKSPACE KEY
@@ -178,6 +246,8 @@ int main()
       	col1 = col1 - 2;
       	
       	}
+      
+      /*	THESE WERE UP-DOWN KEYS 
       if (packet.keycode[0] == 0x52){
       	fbputchar(' ',row1, col1);
       	row1 = row1 -1 ;
@@ -187,7 +257,9 @@ int main()
       	fbputchar(' ',row1, col1);
       	row1 = row1 +1 ;
       	
-      	}
+      	}*/
+      	
+      	
       	// IF ENTER 
       	if (packet.keycode[0] == 0x28){
       	fbputchar('S',row1, col1);
