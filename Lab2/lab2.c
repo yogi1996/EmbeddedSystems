@@ -130,41 +130,17 @@ int main()
   		fbputs("Hello CSEE 4840 World!", 0, 0);
 
       }
-      
+      firstkey = packet.keycode[0];
       if (packet.keycode[0]) { /* NUMBERS */
       	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x28) )
       	
       	{
       		
-      		
-      		char c  = packet.keycode[0] +19;
-      		if (packet.keycode[0] == 0x27){
-      			c = '0';
-      		}
-      		
-      		stringSend[m] = packet.keycode[0];
-      		m = m +1;
-      		
-			fbputchar(c,row1, col1);
-			col1 = col1 +1 ;
-			if (col1 > 63){
-			row1 = row1 +1 ;
-			col1 = 1;
-      	}
-      	}
-      	
-      	//  ALPH
-      	else{
-      		// UPPER 
-      					firstkey = packet.keycode[0];
-if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
+      		if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
 
-printf("SHIFT IS PRESSED %x", packet.keycode[0]);
-/*Capital letters*/
-if (firstkey >= 4 && firstkey <= 29) {
-					firstkey += 61;
-				}
-else{
+				printf("SHIFT IS PRESSED %x", packet.keycode[0]);
+				
+				
 
 // some other char
 switch(firstkey) {
@@ -214,9 +190,53 @@ case 56: firstkey = '?';
 break;
 default: firstkey= '0';
 break;
-				}
 
 				}
+char c  = firstkey;
+      		
+      		stringSend[m] = packet.keycode[0];
+      		m = m +1;
+      		
+			fbputchar(c,row1, col1);
+			col1 = col1 +1 ;
+			if (col1 > 63){
+			row1 = row1 +1 ;
+			col1 = 1;
+
+				
+				}
+	else{
+      		
+      		char c  = packet.keycode[0] +19;
+      		if (packet.keycode[0] == 0x27){
+      			c = '0';
+      		}
+      		
+      		stringSend[m] = packet.keycode[0];
+      		m = m +1;
+      		
+			fbputchar(c,row1, col1);
+			col1 = col1 +1 ;
+			if (col1 > 63){
+			row1 = row1 +1 ;
+			col1 = 1;
+			}
+			
+      	}
+      	}
+      	
+      	//  ALPH
+      	else{
+      		// UPPER 
+      					//firstkey = packet.keycode[0];
+if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
+
+printf("SHIFT IS PRESSED %x", packet.keycode[0]);
+/*Capital letters*/
+if (firstkey >= 4 && firstkey <= 29) {
+					firstkey += 61;
+				}
+
 printf("HERE");
 
 char c = firstkey;
