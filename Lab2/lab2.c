@@ -190,7 +190,7 @@ case 54: shiftKey = '<';
 break;
 case 55: shiftKey = '>';
 break;
-case 56: shiftKey = 'H';
+case 56: shiftKey = '?';
 break;
 default: shiftKey= '0';
 break;
@@ -211,6 +211,9 @@ char c  = shiftKey;
 				}
 				}
 	else{
+			if (packet.keycode[0] == 0x2c){
+			continue;
+			}
       		
       		char c  = packet.keycode[0] +19;
       		if (packet.keycode[0] == 0x27){
