@@ -24,6 +24,7 @@
 #define BUFFER_SIZE 128
 int netRow=1;
 int netCol=0;
+
 /*
  * References:
  *
@@ -42,6 +43,7 @@ void *network_thread_f(void *);
 
 int main()
 {
+  char firstkey;
   int err, col,row,row1,col1,sendRes,m;
   m=0;
   row1 = 21;
@@ -207,7 +209,7 @@ case 55: firstkey = '>';
 break;
 case 56: firstkey = '?';
 break;
-default: is_ascii = 0;
+default: 1;
 break;
 					}
 				}
