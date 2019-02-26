@@ -275,6 +275,9 @@ char c  = shiftKey;
 					printf("HERE");
 
 					char c = shiftKey;
+					stringSend[m] = c;
+      				printf("HERE:%s",stringSend);
+      				m = m +1;
 					fbputchar(c,row1, col1);
 					col1 = col1 +1 ;
 					if (col1 > 63){
@@ -286,6 +289,9 @@ else {
       	
       		//LOWER 
       		char c  = packet.keycode[0] + 93;
+      		stringSend[m] = c;
+      		printf("HERE:%s",stringSend);
+      		m = m +1;
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
