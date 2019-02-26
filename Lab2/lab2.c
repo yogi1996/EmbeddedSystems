@@ -217,6 +217,7 @@ char c  = shiftKey;
 			if (col1 > 63){
 			row1 = row1 +1 ;
 			col1 = 1;
+			}
 			continue;
 			}
       		
