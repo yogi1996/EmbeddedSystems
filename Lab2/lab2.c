@@ -48,7 +48,7 @@ int main()
   m=0;
   row1 = 21;
   col1 = 1;
-  char stringSend [128];
+  char stringSend [128] = {' '};
   struct sockaddr_in serv_addr;
 
   struct usb_keyboard_packet packet;
