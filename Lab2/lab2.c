@@ -145,6 +145,48 @@ int main()
       	
       		printf("WE ARE HERE");
       		
+      		switch(shiftKey) {
+						
+						case 44: shiftKey = ' ';
+										 break;
+						case 45: shiftKey = '-';
+										 break;
+						case 46: shiftKey = '=';
+										 break;
+						case 47: shiftKey = '[';
+										 break;
+						case 48: shiftKey = ']';
+										 break;
+						case 49: shiftKey = '\\';
+										 break;
+						case 51: shiftKey = ';';
+										 break;
+						case 52: shiftKey = '\'';
+										 break;
+						case 53: shiftKey = '`';
+										 break;
+						case 54: shiftKey = ',';
+										 break;
+						case 55: shiftKey = '.';
+										 break;
+						case 56: shiftKey = '/';
+										 break;
+						case 0: break;
+						default: shiftKey = '0';
+										 break;
+										 }
+			char c  = shiftKey;
+      		
+      		stringSend[m] = c;
+      		printf("HERE:%s",stringSend);
+      		m = m +1;
+      		
+			fbputchar(c,row1, col1);
+			col1 = col1 +1 ;
+			if (col1 > 63){
+			row1 = row1 +1 ;
+			col1 = 1;
+      		
       		if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
 
 				printf("SHIFT IS PRESSED %x", packet.keycode[0]);
