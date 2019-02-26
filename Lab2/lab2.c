@@ -127,7 +127,11 @@ int main()
     		fbputchar('*', 20, col);
   		}
   		
+  		
+  		
   		fbputs("Hello CSEE 4840 World!", 0, 0);
+  		
+  		fbputchar(' ', row1, col1);
 
       }
       shiftKey = packet.keycode[0];
