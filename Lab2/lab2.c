@@ -361,6 +361,7 @@ else {
       	m=m-1;
       	stringSend[m] = '\0';
       	fbputs(stringSend,21,1);
+      	m = m+1;
       	
       	//col1 = col1 +1 ;
       	
@@ -372,7 +373,7 @@ else {
       	m=m-1;
       	stringSend[m] = '\0';
       	fbputs(stringSend,21,1);
-      	
+      	m=m-1;
       	}
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
