@@ -333,10 +333,10 @@ else {
       	if (packet.keycode[0] == 0x28){
       	fbputchar('S',row1, col1);
       	
-      	//stringSend[m] = '\0';
+      	stringSend[m] = '\0';
       	printf("%s",stringSend);
       	
-      	sendRes = write(sockfd,"trg2128", strlen("trg2128"));
+      	sendRes = write(sockfd,stringSend, strlen(m-1);
       	m =0;
       	if (sendRes < 0){
       	printf("Error");
