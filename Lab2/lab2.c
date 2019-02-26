@@ -190,6 +190,7 @@ int main()
 			row1 = row1 +1 ;
 			col1 = 1;
 										 }
+										 }
 			
       		if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
 
