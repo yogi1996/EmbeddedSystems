@@ -320,6 +320,7 @@ else {
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
+      	m =m-1;
       	col1 = col1 - 2;
       	if(col1 == 0){
       		row1 = row1 -1;
