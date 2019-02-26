@@ -218,15 +218,8 @@ char c  = shiftKey;
 
 	
 	else{
-			if ((packet.keycode[0] <0x2a) | (packet.keycode[0] >0x2d) ){
-			/*
-			fbputchar(' ',row1, col1);
-			col1 = col1 +1 ;
-			if (col1 > 63){
-			row1 = row1 +1 ;
-			col1 = 1;
-			}*/
 			if ( packet.keycode[0]>= 30 && packet.keycode[0] <= 38){
+			printf("FINALLY HERE");
 			
 					shiftKey = packet.keycode[0];
 					
@@ -265,6 +258,16 @@ char c  = shiftKey;
 					
 				shiftKey = packet.keycode[0] +19;
 			}
+			
+			if ((packet.keycode[0] <0x2a) | (packet.keycode[0] >0x2d) ){
+			/*
+			fbputchar(' ',row1, col1);
+			col1 = col1 +1 ;
+			if (col1 > 63){
+			row1 = row1 +1 ;
+			col1 = 1;
+			}*/
+			
 			
 			char c = shiftKey;
       			if (packet.keycode[0] == 0x27){
