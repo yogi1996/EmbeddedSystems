@@ -336,7 +336,7 @@ else {
       	stringSend[m] = '\0';
       	printf("%s",stringSend);
       	
-      	sendRes = write(sockfd,stringSend, m-1);
+      	sendRes = send(sockfd,stringSend, m-1,0);
       	m =0;
       	if (sendRes < 0){
       	printf("Error");
