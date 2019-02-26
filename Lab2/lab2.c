@@ -430,7 +430,7 @@ else {
       	sendRes = send(sockfd,stringSend, n,0);
       	
       	for (int i = 0; i<n;i++){
-      	stringSend[n] = ' ';
+      	stringSend[i] = ' ';
       	}
       	//stringSend [128] = {' '};
       	m = 0;
