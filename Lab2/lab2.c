@@ -371,7 +371,7 @@ else {
       	if (packet.keycode[0] == 0x50){
       	fbputchar(' ',row1, col1);
       	col1 = col1 - 2 ;
-      	m=m-1;
+      	//m=m-1;
       	//stringSend[m] = '\0';
       	fbputs(stringSend,21,1);
       	//m=m-1;
