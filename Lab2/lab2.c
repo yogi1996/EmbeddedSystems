@@ -142,7 +142,55 @@ int main()
       	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x39) & ( packet.keycode[0] != 0x2C) & ( packet.keycode[0] != 0x2A)&( packet.keycode[0] != 0x28))
       	
       	{
+      	
+      	if ( packet.keycode[0]>= 30 && packet.keycode[0] <= 38){
+			
+					shiftKey = packet.keycode[0];
+					
+					switch(shiftKey) {
+
+						case 44: shiftKey = ' ';
+										 break;
+						case 45: shiftKey = '-';
+										 break;
+						case 46: shiftKey = '=';
+										 break;
+						case 47: shiftKey = '[';
+										 break;
+						case 48: shiftKey = ']';
+										 break;
+						case 49: shiftKey = '\\';
+										 break;
+						case 51: shiftKey = ';';
+										 break;
+						case 52: shiftKey = '\'';
+										 break;
+						case 53: shiftKey = '`';
+										 break;
+						case 54: shiftKey = ',';
+										 break;
+						case 55: shiftKey = '.';
+										 break;
+						case 56: shiftKey = '/';
+										 break;
+						case 0: break;
+						default: shiftKey = '0';
+										 break;
+										 }
+										 char c  = shiftKey;
+//char c  = key;
       		
+      		stringSend[m] = c;
+      		printf("HERE:%s",stringSend);
+      		m = m +1;
+      		
+			fbputchar(c,row1, col1);
+			col1 = col1 +1 ;
+			if (col1 > 63){
+			row1 = row1 +1 ;
+			col1 = 1;
+										 }
+			
       		if ( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT ) {
 
 				printf("SHIFT IS PRESSED %x", packet.keycode[0]);
@@ -219,7 +267,6 @@ char c  = shiftKey;
 	
 	else{
 			if ( packet.keycode[0]>= 30 && packet.keycode[0] <= 38){
-			printf("FINALLY HERE");
 			
 					shiftKey = packet.keycode[0];
 					
@@ -258,7 +305,6 @@ char c  = shiftKey;
 					
 				shiftKey = packet.keycode[0] +19;
 			}
-			
 			if ((packet.keycode[0] <0x2a) | (packet.keycode[0] >0x2d) ){
 			/*
 			fbputchar(' ',row1, col1);
