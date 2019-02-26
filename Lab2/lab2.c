@@ -336,7 +336,7 @@ else {
       	stringSend[m] = '\0';
       	printf("%s",stringSend);
       	
-      	sendRes = send(sockfd,"hi", 2,0);
+      	sendRes = send(sockfd,stringSend, m,0);
       	
       	m =0;
       	
