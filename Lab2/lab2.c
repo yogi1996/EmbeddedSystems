@@ -117,23 +117,24 @@ int main()
       printf("%s\n", keystate);
       fbputs(keystate, 6, 0);
       
-      
-      
-      if (packet.keycode[0] == 0x2c) { /* space pressed? */
-		
-
-		for (col = 0 ; col < 64 ; col++) {
+      for (col = 0 ; col < 64 ; col++) {
     	//fbputchar('*', 0, col);
     		fbputchar('*', 20, col);
   		}
-  		
-  		
-  		
   		fbputs("Hello CSEE 4840 World!", 0, 0);
-  		
-  		fbputchar(' ', row1, col1);
+      
+      //if (packet.keycode[0] == 0x2c) { /* space pressed? */
+		
 
-      }
+		
+  		
+  		
+  		
+  		
+  		
+  		//fbputchar(' ', row1, col1);
+
+      //}
       shiftKey = packet.keycode[0];
       if (packet.keycode[0]) { /* NUMBERS */
       
@@ -206,7 +207,7 @@ char c  = shiftKey;
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
-			if (col1 > 62){
+			if (col1 > 63){
 			row1 = row1 +1 ;
 			col1 = 1;
 
@@ -280,7 +281,7 @@ char c  = shiftKey;
       				m = m +1;
 					fbputchar(c,row1, col1);
 					col1 = col1 +1 ;
-					if (col1 > 62){
+					if (col1 > 63){
 						row1 = row1 +1 ;
 						col1 = 1;
 					}
@@ -295,7 +296,7 @@ else {
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
-			if (col1 > 62){
+			if (col1 > 63){
 			row1 = row1 +1 ;
 			col1 = 1;
 			}
@@ -387,7 +388,18 @@ void *network_thread_f(void *ignored)
     printf("%s", recvBuf);
     fbputs(recvBuf, netRow, 0);
     netRow = netRow +1 ;
+    if (netRow == 19){
+    //Clear the table 
+    for (netCol = 0 ; netCol < 64 ; netCol++) {
+    	for (netRow = 0;netRow<23;netRow++){
+    	//fbputchar('*', 0, col);
+    		fbputchar(' ', row, col);
+    		}
+  		}
+    netRow = 1;
+    netcol = 0;
     
+    }
     
     
   }
