@@ -312,6 +312,7 @@ else {
       	col1 = col1 +1 ;
       	
       	}
+      	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
       	fbputchar(' ',row1, col1);
       	col1 = col1 - 2 ;
@@ -320,10 +321,11 @@ else {
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
-      	printf("Before %d/n",m);
+      	//printf("Before %d/n",m);
       	
       	m = m-2;
-      	printf("After %d/n",m);
+      	
+      	//printf("After %d/n",m);
       	col1 = col1 - 2;
       	if(col1 == 0){
       		row1 = row1 -1;
@@ -331,8 +333,8 @@ else {
       	}
       	
       	if ((row1 == 21)& (col1 == 0)){
-      	row1=21;
-      	col1 = 0;
+      		row1=21;
+      		col1 = 0;
       	}
       	
       	}
@@ -366,14 +368,14 @@ else {
 		}      	
 		else{
 			printf("sent");
-			for (row1 = 21;row1<23;row1++){
+			/*for (row1 = 21;row1<23;row1++){
 				for (col1 = 0 ; col1 < 64 ; col1++) {
     			
     				//fbputchar('*', 0, col);
     				fbputchar(' ', row1, col1);
     				
     			}
-  			}
+  			}*/
   			row1 = 21;
   			col1 = 0;
 		
