@@ -364,10 +364,10 @@ else {
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
       	fbputchar(' ',row1, col1);
-      	int  z = n;
-      	stringSend[z] = '\0';
+      	//int  z = n;
+      	//stringSend[z] = '\0';
       	fbputs(stringSend,21,1);
-      	stringSend[z] = ' ';
+      	//stringSend[z] = ' ';
       	m = m+1;
       	
       	//col1 = col1 +1 ;
@@ -377,10 +377,10 @@ else {
       	if (packet.keycode[0] == 0x50){
       	fbputchar(' ',row1, col1);
       	col1 = col1 - 2 ;
-      	int z1 =n;
-      	stringSend[z1] = '\0';
+      	//int z1 =n;
+      	//stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
-      	stringSend[z1] = ' ';
+      	//stringSend[z1] = ' ';
       	m=m-1;
       	}
       	// THIS IS NOW BACKSPACE KEY
