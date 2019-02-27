@@ -189,7 +189,7 @@ int main()
       		
       		stringSend[m] = c;
       		printf("HERE:%s",stringSend);
-      		m = m +1;
+      		//m = m +1;
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
@@ -260,7 +260,7 @@ int main()
       		
       		stringSend[m] = c;
       		printf("HERE:%s",stringSend);
-      		m = m +1;
+      		//m = m +1;
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
@@ -287,7 +287,7 @@ int main()
       			}
       		
       			stringSend[m] = c;
-      			m = m +1;
+      			//m = m +1;
       			
 				fbputchar(c,row1, col1);
 				col1 = col1 +1 ;
