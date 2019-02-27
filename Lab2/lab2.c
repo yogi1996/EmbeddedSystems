@@ -13,7 +13,6 @@
 #include <unistd.h>
 #include "usbkeyboard.h"
 #include <pthread.h>
-#include <unistd.h>
 
 /* Update SERVER_HOST to be the IP address of
  * the chat server you are connecting to
@@ -72,7 +71,6 @@ int main()
     fbputchar('*', 0, col);
     fbputchar('*', 23, col);
   }
-
 	for (col = 0 ; col < 64 ; col++) {
     //fbputchar('*', 0, col);
     fbputchar('*', 12, col);
@@ -363,61 +361,32 @@ int main()
 			}
 			
       }
-      //cursor stuff
       
       //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
-      sleep(0.5);
-      
-      if (row1  > 0 || row1 == 0){ if (col1 >0 || col1 == 0){ 
       if (packet.keycode[0] == 0x4f){
-      //changed space to null
-      
       	fbputchar(' ',row1, col1);
       	//int  z = n;
       	//stringSend[z] = '\0';
-      	//fbputs(stringSend,21,1);
+      	fbputs(stringSend,21,1);
       	//stringSend[z] = ' ';
-      	//m = m+1;
+      	m = m+1;
       	
       	col1 = col1 +1 ;
-      	printf("/n right m %d", m);
       	
-      	}}}
-      	
-      	
-      	//added the limits to the rows and columns, changed soace to null
-      	//LEFT STILL DOESNT WORK
-      	//while (!(col1 <0 || col1 ==0)) {
+      	}
+      	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
-      	
-      	//fbputchar(' ',row1, col1);
-      	//changed it to null
+      	fbputchar(' ',row1, col1);
       	col1 = col1 - 2 ;
       	//int z1 =n;
       	//stringSend[z1] = '\0';
-      	//fbputs(stringSend,21,1);
-      	//stringSend[z1] = ' ';
-      	m=m-2;
-      	if (m<0){
-      	m=0;
-      	}
-      	
-      	printf("/n left col1 %d", col1);
-      	}
-      	int z1 =n;
-      	stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
-      	stringSend[z1] = ' ';
-      	
-      	//PREVENT SEG FAULT
-      	if (col1 < 0){col1 = col1 +1;
+      	//stringSend[z1] = ' ';
+      	m=m-1;
       	}
-      	//}
-      	
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
-      
       	fbputchar(' ',row1, col1);
       	//printf("Before %d/n",m);
       	
@@ -573,4 +542,3 @@ void *network_thread_f(void *ignored)
 
   return NULL;
 }
-
