@@ -395,6 +395,7 @@ int main()
       	}
       	else if (col1 < 0){col1 = col1 +1;}
       	//}
+      	}
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
