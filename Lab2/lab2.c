@@ -391,9 +391,10 @@ int main()
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
       	m=m-1;
-      	//}
-      	else if (col1 < 0){col1 = col1 +1;}
+      	printf("%d", m);
       	}
+      	else if (col1 < 0){col1 = col1 +1;}
+      	//}
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
