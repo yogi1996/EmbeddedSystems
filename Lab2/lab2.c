@@ -346,17 +346,17 @@ int main()
 			//int m =n;
 			else {
       	
-					//LOWER 
-					char c  = packet.keycode[0] + 93;
-					stringSend[m] = c;
-					printf("HERE:%s",stringSend);
-					m = m +1;
+				//LOWER 
+				char c  = packet.keycode[0] + 93;
+				stringSend[m] = c;
+				printf("HERE:%s",stringSend);
+				m = m +1;
 			
-					fbputchar(c,row1, col1);
-					col1 = col1 +1 ;
-					if (col1 > 63){
-					row1 = row1 +1 ;
-					col1 = 1;
+				fbputchar(c,row1, col1);
+				col1 = col1 +1 ;
+				if (col1 > 63){
+				row1 = row1 +1 ;
+				col1 = 1;
 			}
 			}
 			}
@@ -367,14 +367,13 @@ int main()
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
       	fbputchar(' ',row1, col1);
-      	
       	//int  z = n;
       	//stringSend[z] = '\0';
       	fbputs(stringSend,21,1);
       	//stringSend[z] = ' ';
       	m = m+1;
       	
-      	//col1 = col1 +1 ;
+      	col1 = col1 +1 ;
       	
       	}
       	//LEFT STILL DOESNT WORK 
@@ -386,7 +385,6 @@ int main()
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
       	m=m-1;
-      	
       	}
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
