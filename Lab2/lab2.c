@@ -403,8 +403,10 @@ int main()
       	m=0;
       	}
       	
-      	printf("/n left m %d", m);
+      	printf("/n left col1 %d", col1);
       	}
+      	
+      	//PREVENT SEG FAULT
       	if (col1 < 0){col1 = col1 +1;
       	}
       	//}
