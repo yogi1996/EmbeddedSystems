@@ -488,7 +488,7 @@ void *network_thread_f(void *ignored)
     recvBuf[n] = '\0';
     printf("%s", recvBuf);
     
-    if (n) > 63){
+    if (n > 63){
     	
     	
     	for (int i=0; i<n ;i++){
