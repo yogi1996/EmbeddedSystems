@@ -109,6 +109,8 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
+  printf("m:%d,n:%d,col1:%d,row1:%d",m,n,col1,row1);
+  
   printf("Here 113");
   	if (m>=n){
   	n = m;
