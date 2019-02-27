@@ -381,11 +381,13 @@ int main()
       	printf("/n right m %d", m);
       	
       	}}}
+      	
+      	
       	//added the limits to the rows and columns, changed soace to null
       	//LEFT STILL DOESNT WORK
       	//while (!(col1 <0 || col1 ==0)) {
       	if (packet.keycode[0] == 0x50){
-      	printf("/n left m %d", m);
+      	
       	fbputchar(' ',row1, col1);
       	//changed it to null
       	col1 = col1 - 2 ;
@@ -397,8 +399,11 @@ int main()
       	if (m<0){
       	m=0;
       	}
+      	
+      	printf("/n left m %d", m);
       	}
-      	if (col1 < 0){col1 = col1 +1;}
+      	if (col1 < 0){col1 = col1 +1;
+      	}
       	//}
       	
       	// THIS IS NOW BACKSPACE KEY
