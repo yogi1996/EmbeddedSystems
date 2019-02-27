@@ -385,6 +385,9 @@ int main()
       	//stringSend[z1] = ' ';
       	m=m-1;
       	col1 = col1 - 2 ;
+      	//PREVENT SEG FAULT
+      	if (col1 < 0){col1 = 0;
+      	}
       	}
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
@@ -404,9 +407,7 @@ int main()
       		row1=21;
       		col1 = 1;
       	}
-      	//PREVENT SEG FAULT
-      	if (col1 < 0){col1 = col1 +1;
-      	}
+      	
       	
       	}
       
