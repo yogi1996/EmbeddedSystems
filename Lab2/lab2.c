@@ -382,7 +382,7 @@ else {
       	
       	printf("stringSend before: %s%m", stringSend,m);
       	//stringSend[z] = ' ';
-      	stringSend[m] = " ";
+      	stringSend[m] = "0";
       	 z = m+1;
       	stringSend[z] = '\0';
       	m=m+1;
