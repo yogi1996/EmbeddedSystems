@@ -499,6 +499,7 @@ void *network_thread_f(void *ignored)
     netRow = 1;
     netCol = 0;
     if (BUFFER_SIZE > 63){
+    	int 
     	j =0;
     	
     	for (int i=0; i<BUFFER_SIZE ;i++){
