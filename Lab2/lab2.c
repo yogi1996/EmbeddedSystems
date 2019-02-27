@@ -487,7 +487,7 @@ void *network_thread_f(void *ignored)
     recvBuf[n] = '\0';
     printf("%s", recvBuf);
     
-    if (BUFFER_SIZE > 63){
+    if (strlen(recvBuf) > 63){
     	int j =0;
     	
     	for (int i=0; i<strlen(recvBuf) ;i++){
@@ -497,7 +497,7 @@ void *network_thread_f(void *ignored)
     		
     		if (j> 63){
     			temp[j] = '\0';
-    			fbputs(recvBuf, netRow, 0);
+    			fbputs(temp, netRow, 0);
     			netRow = netRow +2;
     			j =0;
     		}
