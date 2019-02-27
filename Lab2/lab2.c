@@ -378,10 +378,11 @@ else {
       	if ((col1 >n )|(col1==n)){
       	printf("WEN AR$E FINALLY EHERE");
       	
-      	
+      	printf("stringSend before: %s%m", stringSend,m);
       	stringSend[m] = " ";
       	m=m++;
       	col1 = col1++;
+      	printf("stringSend after: %s%m", stringSend,m);
       	//fbputchar(stringSend[col1-1],row1,col1);
       	
       	}
