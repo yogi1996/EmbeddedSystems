@@ -378,13 +378,13 @@ int main()
       	}
       	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
-      	//fbputchar(' ',row1, col1);
+      	fbputchar(' ',row1, col1);
       	
       	//int z1 =n;
       	//stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
-      	m=m-2;
+      	m=m-1;
       	col1 = col1 - 2 ;
       	}
       	// THIS IS NOW BACKSPACE KEY
