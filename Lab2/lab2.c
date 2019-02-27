@@ -144,7 +144,7 @@ int main()
       //}
       shiftKey = packet.keycode[0];
       if ((packet.keycode[0])&& (packet.keycode[0] != 0x50) &&(packet.keycode[0] != 0x4f) ) { /* NUMBERS */
-      
+      printf("WHY VTHE FUCK???") ;
       
       	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x39) & ( packet.keycode[0] != 0x2C) & ( packet.keycode[0] != 0x2A)&( packet.keycode[0] != 0x28))
       	
