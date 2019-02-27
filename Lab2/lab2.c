@@ -381,7 +381,7 @@ int main()
       	}}}
       	//added the limits to the rows and columns, changed soace to null
       	//LEFT STILL DOESNT WORK
-      	while (!(col1 <0 || col1 ==0)) {
+      	//while (!(col1 <0 || col1 ==0)) {
       	if (packet.keycode[0] == 0x50){
       	fbputchar(' ',row1, col1);
       	//changed it to null
@@ -392,8 +392,8 @@ int main()
       	//stringSend[z1] = ' ';
       	m=m-1;
       	}
-      	else if (col1 == 0 || col1 < 0){col1 = col1;}
-      	}
+      	//else if (col1 == 0 || col1 < 0){col1 = col1;}
+      	//}
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
