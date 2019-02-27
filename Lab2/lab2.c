@@ -368,7 +368,7 @@ int main()
       //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
       sleep(0.5);
-      fbputs(stringSend,21,1);
+      
       if (row1  > 0 || row1 == 0){ if (col1 >0 || col1 == 0){ 
       if (packet.keycode[0] == 0x4f){
       //changed space to null
@@ -376,7 +376,7 @@ int main()
       	fbputchar(' ',row1, col1);
       	//int  z = n;
       	//stringSend[z] = '\0';
-      	fbputs(stringSend,21,1);
+      	//fbputs(stringSend,21,1);
       	//stringSend[z] = ' ';
       	//m = m+1;
       	
@@ -405,6 +405,7 @@ int main()
       	
       	printf("/n left col1 %d", col1);
       	}
+      	fbputs(stringSend,21,1);
       	
       	//PREVENT SEG FAULT
       	if (col1 < 0){col1 = col1 +1;
