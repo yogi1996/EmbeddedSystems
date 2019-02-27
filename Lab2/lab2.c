@@ -376,16 +376,18 @@ else {
       	
       	//TRYING WITH 1 char
       	if ((col1 >n )|(col1==n)){
-      	printf("WEN AR$E FINALLY EHERE");
-      	int  z = m;
+      	
+      	//printf("WEN AR$E FINALLY EHERE");
+      	int  z = n;
       	stringSend[z] = '\0';
       	
       	printf("stringSend before: %s%m", stringSend,m);
       	//stringSend[z] = ' ';
-      	stringSend[m] = "0";
-      	 z = m+1;
+      	stringSend[n] = "0";
+      	 z = n+1;
       	stringSend[z] = '\0';
       	m=m+1;
+      	n=n+1;
       	col1 = col1+1;
       	printf("stringSend after: %s%m", stringSend,m);
       	//fbputchar(stringSend[col1-1],row1,col1);
