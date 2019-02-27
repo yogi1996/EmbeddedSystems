@@ -500,11 +500,14 @@ void *network_thread_f(void *ignored)
     		
     			temp[j] = '\0';
     			fbputs(temp, netRow, 0);
-    			netRow = netRow +3;
+    			netRow = netRow +1;
     			netCol = 0;
     			j =0;
     		}
     	}
+    	temp[j] = '\0';
+    	fbputs(temp, netRow, 0);
+    	j=0;
     	netRow = netRow +1;
     	netCol = 0;
     }
