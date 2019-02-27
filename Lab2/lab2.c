@@ -488,7 +488,7 @@ void *network_thread_f(void *ignored)
     recvBuf[n] = '\0';
     printf("HERE IS THE BUFFER %s", recvBuf);
     char temp[65];
-    if (n > 55){
+    if (n > 60){
     	
     	
     	for (int i=0; i<n ;i++){
@@ -496,7 +496,7 @@ void *network_thread_f(void *ignored)
     		temp[j] = recvBuf[i];
     		j++;
     		
-    		if (j> 55){
+    		if (j> 60){
     		
     			temp[j] = '\0';
     			fbputs(temp, netRow, 0);
