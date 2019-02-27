@@ -414,7 +414,9 @@ else {
       	m=m-1;
       	col1=col1-1;
       	if(col1<1){
-      	col1 =col1;
+      	col1 =1;
+      	m=0;
+      	
       	
       	}
       	
