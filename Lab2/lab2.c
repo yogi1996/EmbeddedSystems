@@ -120,7 +120,7 @@ int main()
     if (transferred == sizeof(packet)) {
       //sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
 	    //  packet.keycode[1]);
-      printf("%s\n", keystate);
+      //printf("%s\n", keystate);
       fbputs(keystate, 6, 0);
       
       for (col = 0 ; col < 64 ; col++) {
