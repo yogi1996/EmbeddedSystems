@@ -368,7 +368,7 @@ int main()
       if (row1 > 0 || row1 == 0){ if (col1 >0 || col1 == 0){ 
       if (packet.keycode[0] == 0x4f){
       //changed space to null
-      	fbputchar('%n',row1, col1);
+      	fbputchar('',row1, col1);
       	//int  z = n;
       	//stringSend[z] = '\0';
       	fbputs(stringSend,21,1);
@@ -381,7 +381,7 @@ int main()
       	//added the limits to the rows and columns, changed soace to null
       	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
-      	fbputchar('%n',row1, col1);
+      	fbputchar('',row1, col1);
       	//changed it to null
       	col1 = col1 - 2 ;
       	//int z1 =n;
