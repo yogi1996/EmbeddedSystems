@@ -481,16 +481,17 @@ void *network_thread_f(void *ignored)
   char recvBuf[BUFFER_SIZE];
   char temp[65];
   int n;
+  int j =0;
   /* Receive data */
   
   while ( (n = read(sockfd, &recvBuf, BUFFER_SIZE - 1)) > 0 ) {
     recvBuf[n] = '\0';
     printf("%s", recvBuf);
     
-    if (strlen(recvBuf) > 63){
-    	int j =0;
+    if (n) > 63){
     	
-    	for (int i=0; i<strlen(recvBuf) ;i++){
+    	
+    	for (int i=0; i<n ;i++){
     	
     		temp[j] = recvBuf[i];
     		j++;
