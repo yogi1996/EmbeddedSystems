@@ -189,9 +189,7 @@ int main()
       		
       		stringSend[m] = c;
       		printf("HERE:%s",stringSend);
-      		if (m>(n-1)){
-      			m = m +1;
-      		}
+      		m = m +1;
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
@@ -262,9 +260,7 @@ int main()
       		
       		stringSend[m] = c;
       		printf("HERE:%s",stringSend);
-      		if (m>(n-1)){
-      			m = m +1;
-      		}
+      		m = m +1;
       		
 			fbputchar(c,row1, col1);
 			col1 = col1 +1 ;
@@ -291,9 +287,7 @@ int main()
       			}
       		
       			stringSend[m] = c;
-      			if (m>(n-1)){
       			m = m +1;
-      		}
       			
 				fbputchar(c,row1, col1);
 				col1 = col1 +1 ;
@@ -341,9 +335,7 @@ int main()
 					char c = shiftKey;
 					stringSend[m] = c;
       				printf("HERE:%s",stringSend);
-      				if (m>(n-1)){
-      					m = m +1;
-      				}
+      				m = m +1;
 					fbputchar(c,row1, col1);
 					col1 = col1 +1 ;
 					if (col1 > 63){
@@ -358,17 +350,15 @@ int main()
 					char c  = packet.keycode[0] + 93;
 					stringSend[m] = c;
 					printf("HERE:%s",stringSend);
-					if (m>(n-1)){
-      					m = m +1;
-      				}
+					m = m +1;
 			
 					fbputchar(c,row1, col1);
 					col1 = col1 +1 ;
 					if (col1 > 63){
-						row1 = row1 +1 ;
-						col1 = 1;
-					}
-				}
+					row1 = row1 +1 ;
+					col1 = 1;
+			}
+			}
 			}
 			
       }
@@ -394,7 +384,7 @@ int main()
       	//stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
-      	m=m-1;
+      	m=m-2;
       	}
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
