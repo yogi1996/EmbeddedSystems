@@ -515,8 +515,10 @@ void *network_thread_f(void *ignored)
     		}
     	}
     }
+    else{
     fbputs(recvBuf, netRow, 0);
     netRow = 2;
+    }
     }
     
     
