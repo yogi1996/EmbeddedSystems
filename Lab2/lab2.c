@@ -117,11 +117,10 @@ int main()
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
     if (transferred == sizeof(packet)) {
-    //DISPLAYING KEY STATES
-      //sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
-	    //  packet.keycode[1]);
+      sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
+	      packet.keycode[1]);
       printf("%s\n", keystate);
-      //fbputs(keystate, 6, 0);
+      fbputs(keystate, 6, 0);
       
       for (col = 0 ; col < 64 ; col++) {
     	//fbputchar('*', 0, col);
@@ -152,9 +151,8 @@ int main()
       		printf("WE ARE HERE");
       		
       		if ((packet.keycode[0]>0x2c) & ~( packet.modifiers & USB_LSHIFT || packet.modifiers & USB_RSHIFT )){
-      		// WHEN TH E SHITFT KEY IS NOT PRESSED
       		
-      		      		switch(shiftKey) {
+      		switch(shiftKey) {
 						
 						case 44: shiftKey = ' ';
 										 break;
@@ -205,57 +203,57 @@ int main()
 				
 				
 
-							// some other char
-							switch(shiftKey) {
-							case 30: shiftKey = '!';  
-							break;
-							case 31: shiftKey = '@';
-							break;
-							case 32: shiftKey = '#';
-							break;
-							case 33: shiftKey = '$';
-							break;
-							case 34: shiftKey = '%';
-							break;
-							case 35: shiftKey = '^';
-							break;
-							case 36: shiftKey = '&';
-							break;
-							case 37: shiftKey = '*';
-							break;
-							case 38: shiftKey = '(';
-							break;
-							case 39: shiftKey = ')';
-							break;
-							case 44: shiftKey = ' ';
-							break;
-							case 45: shiftKey = '_';
-							break;
-							case 46: shiftKey = '+';
-							break;
-							case 47: shiftKey = '{';
-							break;
-							case 48: shiftKey = '}';
-							break;
-							case 49: shiftKey = '|';
-							break;
-							case 51: shiftKey = ':';
-							break;
-							case 52: shiftKey = '"';
-							break;
-							case 53: shiftKey = '~';
-							break;
-							case 54: shiftKey = '<';
-							break;
-							case 55: shiftKey = '>';
-							break;
-							case 56: shiftKey = '?';
-							break;
-							default: shiftKey= '0';
-							break;
+// some other char
+switch(shiftKey) {
+case 30: shiftKey = '!';  
+break;
+case 31: shiftKey = '@';
+break;
+case 32: shiftKey = '#';
+break;
+case 33: shiftKey = '$';
+break;
+case 34: shiftKey = '%';
+break;
+case 35: shiftKey = '^';
+break;
+case 36: shiftKey = '&';
+break;
+case 37: shiftKey = '*';
+break;
+case 38: shiftKey = '(';
+break;
+case 39: shiftKey = ')';
+break;
+case 44: shiftKey = ' ';
+break;
+case 45: shiftKey = '_';
+break;
+case 46: shiftKey = '+';
+break;
+case 47: shiftKey = '{';
+break;
+case 48: shiftKey = '}';
+break;
+case 49: shiftKey = '|';
+break;
+case 51: shiftKey = ':';
+break;
+case 52: shiftKey = '"';
+break;
+case 53: shiftKey = '~';
+break;
+case 54: shiftKey = '<';
+break;
+case 55: shiftKey = '>';
+break;
+case 56: shiftKey = '?';
+break;
+default: shiftKey= '0';
+break;
 
 				}
-			char c  = shiftKey;
+char c  = shiftKey;
       		
       		stringSend[m] = c;
       		printf("HERE:%s",stringSend);
@@ -343,19 +341,19 @@ int main()
 					}
 			}
 			//int m =n;
-			else {
+else {
       	
-				//LOWER 
-				char c  = packet.keycode[0] + 93;
-				stringSend[m] = c;
-				printf("HERE:%s",stringSend);
-				m = m +1;
-			
-				fbputchar(c,row1, col1);
-				col1 = col1 +1 ;
-				if (col1 > 63){
-				row1 = row1 +1 ;
-				col1 = 1;
+      		//LOWER 
+      		char c  = packet.keycode[0] + 93;
+      		stringSend[m] = c;
+      		printf("HERE:%s",stringSend);
+      		m = m +1;
+      		
+			fbputchar(c,row1, col1);
+			col1 = col1 +1 ;
+			if (col1 > 63){
+			row1 = row1 +1 ;
+			col1 = 1;
 			}
 			}
 			}
