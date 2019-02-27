@@ -385,8 +385,8 @@ else {
       	stringSend[m] = " ";
       	 z = m+1;
       	stringSend[z] = '\0';
-      	m=m++;
-      	col1 = col1++;
+      	m=m+1;
+      	col1 = col1+1;
       	printf("stringSend after: %s%m", stringSend,m);
       	//fbputchar(stringSend[col1-1],row1,col1);
       	
