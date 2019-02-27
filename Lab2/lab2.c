@@ -1,4 +1,4 @@
-/*
+/* GOOD ENOUGH TO DEMO
  *
  * CSEE 4840 Lab 2 for 2019
  *
