@@ -370,7 +370,7 @@ else {
       	//stringSend[z] = ' ';
       	m = m+1;
       	
-      	col1 = col1 +1 ;
+      	//col1 = col1 +1 ;
       	
       	}
       	//LEFT STILL DOESNT WORK 
