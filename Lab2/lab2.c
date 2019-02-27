@@ -498,7 +498,8 @@ void *network_thread_f(void *ignored)
     		if (j> 63){
     			temp[j] = '\0';
     			fbputs(temp, netRow, 0);
-    			netRow = netRow +2;
+    			netRow = netRow +1;
+    			netCol = 0;
     			j =0;
     		}
     	}
