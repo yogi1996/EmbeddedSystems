@@ -47,7 +47,7 @@ int main()
   char shiftKey;
   int err, col,row,row1,col1,sendRes,m,n;
   m=0;
-  //n=0;
+  n=0;
   row1 = 21;
   col1 = 1;
   char stringSend [128] = {' '};
@@ -364,10 +364,10 @@ else {
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
       	fbputchar(' ',row1, col1);
-      	//int  z = n;
-      	//stringSend[z] = '\0';
+      	int  z = n;
+      	stringSend[z] = '\0';
       	fbputs(stringSend,21,1);
-      	//stringSend[z] = ' ';
+      	stringSend[z] = ' ';
       	m = m+1;
       	
       	//col1 = col1 +1 ;
@@ -383,6 +383,7 @@ else {
       	//stringSend[z1] = ' ';
       	m=m-1;
       	}
+      	
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
