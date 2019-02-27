@@ -377,9 +377,14 @@ else {
       	//TRYING WITH 1 char
       	if ((col1 >n )|(col1==n)){
       	printf("WEN AR$E FINALLY EHERE");
+      	int  z = m;
+      	stringSend[z] = '\0';
       	
       	printf("stringSend before: %s%m", stringSend,m);
+      	//stringSend[z] = ' ';
       	stringSend[m] = " ";
+      	int  z = m+1;
+      	stringSend[z] = '\0';
       	m=m++;
       	col1 = col1++;
       	printf("stringSend after: %s%m", stringSend,m);
