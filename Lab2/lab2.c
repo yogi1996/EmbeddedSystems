@@ -381,8 +381,8 @@ int main()
       	if (packet.keycode[0] == 0x50){
       	fbputchar(' ',row1, col1);
       	col1 = col1 - 2 ;
-      	int z1 =n;
-      	stringSend[z1] = '\0';
+      	//int z1 =n;
+      	//stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
       	m=m-1;
