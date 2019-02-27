@@ -478,7 +478,6 @@ else {
 void *network_thread_f(void *ignored)
 {
   char recvBuf[BUFFER_SIZE];
-  char temp[65];
   int n;
   /* Receive data */
   
@@ -495,24 +494,8 @@ void *network_thread_f(void *ignored)
     		fbputchar(' ', netRow, netCol);
     		}
   		}
-  		
     netRow = 1;
     netCol = 0;
-    if (BUFFER_SIZE > 63){
-    	j =0;
-    	
-    	for (int i=0; i<BUFFER_SIZE ;i++){
-    	
-    		temp[j] = recBuf[i];
-    		j++;
-    		
-    		if (j> 63){
-    			fbputs(recvBuf, netRow, 0);
-    			netRow = netRow +1;
-    			j =0;
-    		}
-    	}
-    }
     fbputs(recvBuf, netRow, 0);
     netRow = 2;
     }
