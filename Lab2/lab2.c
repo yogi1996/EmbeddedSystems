@@ -365,7 +365,7 @@ int main()
       
       //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
-      if (row1 > 0 || row1 == 0){ if (col1 >0 || col1 = 0){ 
+      if (row1 > 0 || row1 == 0){ if (col1 >0 || col1 == 0){ 
       if (packet.keycode[0] == 0x4f){
       //changed space to null
       	fbputchar('%n',row1, col1);
