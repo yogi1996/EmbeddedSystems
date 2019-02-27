@@ -492,7 +492,7 @@ void *network_thread_f(void *ignored)
     	
     	
     	for (int i=0; i<n ;i++){
-    	
+    		printf("%s",recvBuf[i]);
     		temp[j] = recvBuf[i];
     		j++;
     		
@@ -505,12 +505,13 @@ void *network_thread_f(void *ignored)
     		}
     	}
     	netRow = netRow +1;
-    		netCol = 0;
+    	netCol = 0;
     }
     else{
     fbputs(recvBuf, netRow, 0);
     netRow = netRow +1 ;
     }
+    
     if (netRow == 21){
     //Clear the table 
     for (netCol = 0 ; netCol < 64 ; netCol++) {
