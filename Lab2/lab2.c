@@ -405,7 +405,10 @@ int main()
       	
       	printf("/n left col1 %d", col1);
       	}
+      	int z1 =n;
+      	stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
+      	stringSend[z1] = ' ';
       	
       	//PREVENT SEG FAULT
       	if (col1 < 0){col1 = col1 +1;
