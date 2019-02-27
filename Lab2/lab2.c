@@ -378,7 +378,7 @@ int main()
       	}
       	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
-      	fbputchar(' ',row1, col1);
+      	//fbputchar(' ',row1, col1);
       	
       	//int z1 =n;
       	//stringSend[z1] = '\0';
