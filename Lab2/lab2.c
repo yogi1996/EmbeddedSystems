@@ -375,7 +375,12 @@ else {
       	//col1 = col1 +1 ;
       	
       	//TRYING WITH 1 char
+      	if ((col1 >n )||(col1==n)){
+      	stringSend[col1-1] = " ";
+      	//fbputchar(stringSend[col1-1],row1,col1);
+      	}
       	fbputchar(stringSend[col1-1],row1,col1);
+      	
       	
       	
       	}
