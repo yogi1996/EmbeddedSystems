@@ -375,7 +375,7 @@ int main()
       	//stringSend[z] = '\0';
       	fbputs(stringSend,21,1);
       	//stringSend[z] = ' ';
-      	m = m+1;
+      	//m = m+1;
       	
       	col1 = col1 +1 ;
       	
@@ -392,7 +392,7 @@ int main()
       	//stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
-      	m=m-1;
+      	m=m-2;
       	}
       	if (col1 < 0){col1 = col1 +1;}
       	//}
