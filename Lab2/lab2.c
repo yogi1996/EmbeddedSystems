@@ -486,7 +486,7 @@ void *network_thread_f(void *ignored)
   
   while ( (n = read(sockfd, &recvBuf, BUFFER_SIZE - 1)) > 0 ) {
     recvBuf[n] = '\0';
-    printf("%s", recvBuf);
+    printf("HERE IS THE BUFFER %s", recvBuf);
     char temp[65];
     if (n > 63){
     	
