@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include "usbkeyboard.h"
 #include <pthread.h>
+#include <unistd.h>
 
 /* Update SERVER_HOST to be the IP address of
  * the chat server you are connecting to
@@ -366,7 +367,7 @@ int main()
       
       //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
-      delay(500);
+      sleep(0.5);
       fbputs(stringSend,21,1);
       if (row1  > 0 || row1 == 0){ if (col1 >0 || col1 == 0){ 
       if (packet.keycode[0] == 0x4f){
