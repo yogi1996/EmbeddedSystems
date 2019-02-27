@@ -510,7 +510,7 @@ void *network_thread_f(void *ignored)
     		if (j> 63){
     			temp[j] = '\0';
     			fbputs(recvBuf, netRow, 0);
-    			netRow = netRow +1;
+    			netRow = netRow +2;
     			j =0;
     		}
     	}
