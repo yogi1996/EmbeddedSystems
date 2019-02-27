@@ -383,7 +383,7 @@ int main()
       	int z1 =n;
       	stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
-      	//stringSend[z1] = ' ';
+      	stringSend[z1] = ' ';
       	m=m-1;
       	
       	}
