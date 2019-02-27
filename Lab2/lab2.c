@@ -369,7 +369,7 @@ int main()
       if (row1  > 0 || row1 == 0){ if (col1 >0 || col1 == 0){ 
       if (packet.keycode[0] == 0x4f){
       //changed space to null
-      printf("/n right m %d", m);
+      
       	fbputchar(' ',row1, col1);
       	//int  z = n;
       	//stringSend[z] = '\0';
@@ -378,6 +378,7 @@ int main()
       	//m = m+1;
       	
       	col1 = col1 +1 ;
+      	printf("/n right m %d", m);
       	
       	}}}
       	//added the limits to the rows and columns, changed soace to null
