@@ -396,8 +396,8 @@ else {
       	}
       	else{
       	fbputchar(stringSend[col1-1],row1,col1);
-      	col1 = col1+1;
-      	m=m+1;
+      	//col1 = col1+1;
+      	//m=m+1;
       	}
       	
       	
