@@ -411,8 +411,6 @@ else {
       	//TRYING WITH 1 char
       	
       	fbputchar(stringSend[col1-1],row1,col1);
-      	fbputchar(stringSend[col1],row1,col1+1);
-      	//printf("stringSend after: %s%m", stringSend,m);
       	m=m-1;
       	col1=col1-1;
       	if(col1<1){
