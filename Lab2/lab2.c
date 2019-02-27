@@ -505,8 +505,8 @@ void *network_thread_f(void *ignored)
     			j =0;
     		}
     	}
-    	//netRow = netRow +1;
-    	//netCol = 0;
+    	netRow = netRow +1;
+    	netCol = 0;
     }
     else{
     fbputs(recvBuf, netRow, 0);
