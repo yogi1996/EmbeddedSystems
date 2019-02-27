@@ -499,7 +499,7 @@ void *network_thread_f(void *ignored)
     		if (j> 55){
     			temp[j] = '\0';
     			fbputs(temp, netRow, 0);
-    			netRow = netRow +1;
+    			netRow = netRow +3;
     			netCol = 0;
     			j =0;
     		}
