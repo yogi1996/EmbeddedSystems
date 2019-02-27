@@ -391,7 +391,7 @@ else {
       	n=n+1;
       	col1 = col1+1;
       	printf("stringSend after: %s%m", stringSend,m);
-      	fbputchar(stringSend[col1-1],row1,col1);
+      	//fbputchar(stringSend[col1-1],row1,col1);
       	
       	}
       	else{
