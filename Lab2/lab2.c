@@ -110,6 +110,7 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
+  printf("Here 113");
   	if (m>=n){
   	n = m;
   	}
