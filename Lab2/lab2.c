@@ -393,6 +393,9 @@ int main()
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
       	m=m-2;
+      	if (m<0){
+      	m=0;
+      	}
       	}
       	if (col1 < 0){col1 = col1 +1;}
       	//}
