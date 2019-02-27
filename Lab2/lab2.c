@@ -410,6 +410,10 @@ else {
       	m=m-1;*/
       	//TRYING WITH 1 char
       	
+      	fbputchar(stringSend[col1-1],row1,col1);
+      	m=m-1;
+      	col1=col1-1;
+      	
       	}
       	
       	// THIS IS NOW BACKSPACE KEY
