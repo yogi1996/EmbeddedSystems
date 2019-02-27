@@ -492,7 +492,7 @@ void *network_thread_f(void *ignored)
     	
     	
     	for (int i=0; i<n ;i++){
-    		printf("%s",recvBuf[i]);
+    		printf("%d",i);
     		temp[j] = recvBuf[i];
     		j++;
     		
