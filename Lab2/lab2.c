@@ -488,7 +488,7 @@ void *network_thread_f(void *ignored)
     recvBuf[n] = '\0';
     printf("HERE IS THE BUFFER %s", recvBuf);
     char temp[65];
-    if (n > 63){
+    if (n > 55){
     	
     	
     	for (int i=0; i<n ;i++){
@@ -497,6 +497,7 @@ void *network_thread_f(void *ignored)
     		j++;
     		
     		if (j> 55){
+    		
     			temp[j] = '\0';
     			fbputs(temp, netRow, 0);
     			netRow = netRow +3;
@@ -504,12 +505,13 @@ void *network_thread_f(void *ignored)
     			j =0;
     		}
     	}
-    	netRow = netRow +1;
-    	netCol = 0;
+    	//netRow = netRow +1;
+    	//netCol = 0;
     }
     else{
     fbputs(recvBuf, netRow, 0);
     netRow = netRow +1 ;
+    netCol = 0;
     }
     
     if (netRow == 21){
