@@ -141,7 +141,7 @@ int main()
 
       //}
       shiftKey = packet.keycode[0];
-      if (packet.keycode[0]) { /* NUMBERS */
+      if ((packet.keycode[0])& (packet.keycode[0] != 0x50) &(packet.keycode[0] != 0x4f) ) { /* NUMBERS */
       
       
       	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x39) & ( packet.keycode[0] != 0x2C) & ( packet.keycode[0] != 0x2A)&( packet.keycode[0] != 0x28))
@@ -327,11 +327,11 @@ char c  = shiftKey;
 						shiftKey += 61;
 						}
 
-					printf("HERE");
+					//printf("HERE");
 
 					char c = shiftKey;
 					stringSend[m] = c;
-      				printf("HERE:%s",stringSend);
+      				//printf("HERE:%s",stringSend);
       				m = m +1;
 					fbputchar(c,row1, col1);
 					col1 = col1 +1 ;
@@ -363,25 +363,31 @@ else {
       //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
-      	fbputchar(' ',row1, col1);
-      	int  z = n;
-      	stringSend[z] = '\0';
-      	fbputs(stringSend,21,1);
-      	stringSend[z] = ' ';
-      	m = m+1;
+      	//fbputchar(' ',row1, col1);
+      	//int  z = n;
+      	//stringSend[z] = '\0';
+      	//fbputs(stringSend,21,1);
+      	//stringSend[z] = ' ';
+      	//m = m+1;
       	
       	//col1 = col1 +1 ;
+      	
+      	//TRYING WITH 1 char
+      	fbputchar(stringSend[col1-1],row1,col1);
+      	
       	
       	}
       	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
-      	fbputchar(' ',row1, col1);
+      	/*fbputchar(' ',row1, col1);
       	col1 = col1 - 2 ;
       	//int z1 =n;
       	//stringSend[z1] = '\0';
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
-      	m=m-1;
+      	m=m-1;*/
+      	//TRYING WITH 1 char
+      	
       	}
       	
       	// THIS IS NOW BACKSPACE KEY
