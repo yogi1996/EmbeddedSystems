@@ -369,6 +369,7 @@ int main()
       if (row1  > 0 || row1 == 0){ if (col1 >0 || col1 == 0){ 
       if (packet.keycode[0] == 0x4f){
       //changed space to null
+      printf("/n right m %d", m);
       	fbputchar(' ',row1, col1);
       	//int  z = n;
       	//stringSend[z] = '\0';
@@ -383,6 +384,7 @@ int main()
       	//LEFT STILL DOESNT WORK
       	//while (!(col1 <0 || col1 ==0)) {
       	if (packet.keycode[0] == 0x50){
+      	printf("/n left m %d", m);
       	fbputchar(' ',row1, col1);
       	//changed it to null
       	col1 = col1 - 2 ;
@@ -391,13 +393,13 @@ int main()
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
       	m=m-1;
-      	printf("%d", m);
       	}
       	if (col1 < 0){col1 = col1 +1;}
       	//}
       	
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
+      
       	fbputchar(' ',row1, col1);
       	//printf("Before %d/n",m);
       	
