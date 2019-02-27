@@ -505,7 +505,7 @@ void *network_thread_f(void *ignored)
     	
     	for (int i=0; i<BUFFER_SIZE ;i++){
     	
-    		temp[j] = recBuf[i];
+    		temp[j] = recvBuf[i];
     		j++;
     		
     		if (j> 63){
