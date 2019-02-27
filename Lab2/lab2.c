@@ -383,7 +383,7 @@ else {
       	
       	printf("stringSend before: %s%m", stringSend,m);
       	//stringSend[z] = ' ';
-      	stringSend[n] = " ";
+      	stringSend[n] = ' ';
       	fbputchar(" ",row1,col1);
       	 z = n+1;
       	stringSend[z] = '\0';
