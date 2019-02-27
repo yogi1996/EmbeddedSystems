@@ -485,7 +485,9 @@ void *network_thread_f(void *ignored)
   /* Receive data */
   
   while ( (n = read(sockfd, &recvBuf, BUFFER_SIZE - 1)) > 0 ) {
-  	if (netRow == 21){
+  	recvBuf[n] = '\0';
+    printf("HERE IS THE BUFFER %s", recvBuf);
+  	if (netRow == 20){
     //Clear the table 
     for (netCol = 0 ; netCol < 64 ; netCol++) {
     	for (netRow = 0;netRow<21;netRow++){
@@ -497,11 +499,10 @@ void *network_thread_f(void *ignored)
     netRow = 1;
     netCol = 0;
     
-    fbputs(recvBuf, netRow, 0);
+    //fbputs(recvBuf, netRow, 0);
     netRow = 2;
     }
-    recvBuf[n] = '\0';
-    printf("HERE IS THE BUFFER %s", recvBuf);
+    
     char temp[65];
     if (n > 60){
     	
