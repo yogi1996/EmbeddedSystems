@@ -378,6 +378,7 @@ else {
       	if ((col1 >n )|(col1==n)){
       	
       	//printf("WEN AR$E FINALLY EHERE");
+    
       	int  z = n;
       	stringSend[z] = '\0';
       	
@@ -395,9 +396,18 @@ else {
       	
       	}
       	else{
+      	// if (row1==21){
       	fbputchar(stringSend[col1-1],row1,col1);
       	col1 = col1+1;
       	m=m+1;
+      	
+      	//}
+      	//else{
+      	/*fbputchar(stringSend[col1-1 +63],row1,col1);
+      	col1 = col1+1;
+      	m=m+1;*.
+      	
+      	//}
       	}
       	
       	
@@ -411,15 +421,31 @@ else {
       	fbputs(stringSend,21,1);
       	//stringSend[z1] = ' ';
       	m=m-1;*/
+      	
+      	
       	//TRYING WITH 1 char
       	
+      	//Check this later: still getting weird colons cant figure out why 
+      	//also this will only work for row 21
+      	if(row1==21){
       	fbputchar(stringSend[col1-1],row1,col1);
       	m=m-1;
       	col1=col1-1;
       	if(col1<1){
       	col1 =1;
       	m=0;
+      	}
+      	else{
       	
+      	fbputchar(stringSend[col1-1 + 63],row1,col1);
+      	m=m-1;
+      	col1=col1-1;
+      	if(col1<1){
+      	col1 =1;
+      	m=0;
+      	
+      	
+      	}
       	
       	}
       	
