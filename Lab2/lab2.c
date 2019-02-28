@@ -1,4 +1,4 @@
-/* GOOD ENOUGH TO DEMO
+/* GOOD ENOUGH TO DEMO 2
  *
  * CSEE 4840 Lab 2 for 2019
  *
@@ -119,9 +119,9 @@ int main()
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
     if (transferred == sizeof(packet)) {
-      sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
-	      packet.keycode[1]);
-      printf("%s\n", keystate);
+      //sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
+	    //  packet.keycode[1]);
+      //printf("%s\n", keystate);
       fbputs(keystate, 6, 0);
       
       for (col = 0 ; col < 64 ; col++) {
