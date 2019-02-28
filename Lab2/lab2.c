@@ -356,7 +356,7 @@ else {
       		//LOWER 
       		char c  = packet.keycode[0] + 93;
       		stringSend[m] = c;
-      		printf("HERE:%s",stringSend);
+      		//printf("HERE:%s",stringSend);
       		m = m +1;
       		
 			fbputchar(c,row1, col1);
@@ -391,7 +391,7 @@ else {
 				}
 				
 				if ( (row==22) && (col1>(n-64)) ){
-				printf("HELP");
+				//printf("HELP");
 						int  z = n;
 								stringSend[z] = '\0';
 		
