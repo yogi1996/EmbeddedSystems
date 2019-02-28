@@ -122,7 +122,7 @@ int main()
       //sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
 	    //  packet.keycode[1]);
       //printf("%s\n", keystate);
-      fbputs(keystate, 6, 0);
+      //fbputs(keystate, 6, 0);
       
       for (col = 0 ; col < 64 ; col++) {
     	//fbputchar('*', 0, col);
