@@ -373,7 +373,7 @@ else {
 				//m = m+1;
 		
 				//col1 = col1 +1 ;
-				if (col1>62){
+				if (col1>63){
 				col1 =1;
 				row1 = row1+1;
 				}
