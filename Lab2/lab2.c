@@ -442,7 +442,7 @@ else {
 				fbputs(stringSend,21,1);
 				//stringSend[z1] = ' ';
 				m=m-1;*/
-				if(col1 == 0){
+				if(col1 == 1){
 					row1 = row1 -1;
 					col1 = 62;
 				}
