@@ -380,7 +380,7 @@ else {
 				}
 		
 				//TRYING WITH 1 char
-				if ( (col1 >(n-1) )& (row==21) ){
+				if ( (col1 >(n-1) )&& (row==21) ){
 		
 				//printf("WEN AR$E FINALLY EHERE");
 	
@@ -400,7 +400,7 @@ else {
 						//fbputchar(stringSend[col1-1],row1,col1);
 		
 				}
-				else if ( (row!=21) & (col1>(n-64)) ){
+				else if ( (row!=21) && (col1>(n-64)) ){
 						int  z = n;
 								stringSend[z] = '\0';
 		
