@@ -109,6 +109,7 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
+  
   printf("m:%d,n:%d,col1:%d,row1:%d",m,n,col1,row1);
   
   printf("Here 113");
@@ -379,7 +380,7 @@ else {
 				}
 		
 				//TRYING WITH 1 char
-				if ((col1 >n )|(col1==n)&(row==21)){
+				if ( (col1 >(n-1) )& (row==21) ){
 		
 				//printf("WEN AR$E FINALLY EHERE");
 	
@@ -435,21 +436,16 @@ else {
       	}
       	//LEFT FINLALLY WORKS 
       	if (packet.keycode[0] == 0x50){
-				/*fbputchar(' ',row1, col1);
-				col1 = col1 - 2 ;
-				//int z1 =n;
-				//stringSend[z1] = '\0';
-				fbputs(stringSend,21,1);
-				//stringSend[z1] = ' ';
-				m=m-1;*/
+				
 				if(col1 == 1){
 					row1 = row1 -1;
 					col1 = 62;
 				}
-					if ((row1 < 21)){
-							row1=21;
-							col1 = 1;
-						}
+				
+				if ((row1 < 21)){
+						row1=21;
+						col1 = 1;
+					}
 		
 				//TRYING WITH 1 char
 		
