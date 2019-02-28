@@ -379,6 +379,10 @@ else {
 				col1 =1;
 				row1 = row1+1;
 				}
+				if (row1 == 23){
+				col1 =63;
+				row1 = 22;
+				}
 				
 				if ( (row==22) && (col1>(n-64)) ){
 				printf("HELP");
