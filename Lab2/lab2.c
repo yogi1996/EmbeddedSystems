@@ -395,16 +395,16 @@ else {
 						int  z = n;
 								stringSend[z] = '\0';
 		
-								printf("stringSend before: %s%m", stringSend,m);
+								//printf("stringSend before: %s%m", stringSend,m);
 								//stringSend[z] = ' ';
-								stringSend[n] = ' ';
+								//stringSend[n] = ' ';
 								fbputchar(' ',row1,col1);
-								 z = n+1;
-								stringSend[z] = '\0';
+								// z = n+1;
+								//stringSend[z] = '\0';
 								m=m+1;
 								n=n+1;
 								col1 = col1+1;
-								printf("stringSend after: %s%m", stringSend,m);
+								//printf("stringSend after: %s%m", stringSend,m);
 								//fbputchar(stringSend[col1-1],row1,col1);
 				
 				}
@@ -414,19 +414,19 @@ else {
 					printf("HELP1");
 				//printf("WEN AR$E FINALLY EHERE");
 	
-						int  z = n;
-						stringSend[z] = '\0';
+						//int  z = n;
+						//stringSend[z] = '\0';
 		
-						printf("stringSend before: %s%m", stringSend,m);
+						//printf("stringSend before: %s%m", stringSend,m);
 						//stringSend[z] = ' ';
 						stringSend[n] = ' ';
 						fbputchar(' ',row1,col1);
-						 z = n+1;
-						stringSend[z] = '\0';
+						// z = n+1;
+						//stringSend[z] = '\0';
 						m=m+1;
 						n=n+1;
 						col1 = col1+1;
-						printf("stringSend after: %s%m", stringSend,m);
+						//printf("stringSend after: %s%m", stringSend,m);
 						//fbputchar(stringSend[col1-1],row1,col1);
 		
 				}
@@ -526,8 +526,10 @@ else {
       	
       	// IF ENTER 
       	if (packet.keycode[0] == 0x28){
-      	fbputchar(stringSend[col1-1],row1,col1);
+      	//fbputchar(stringSend[col1-1],row1,col1);
       	//fbputchar('S',row1, col1);
+      	
+      	
       	printf("This is m: %d",m);
       	//m=m-1;
       	//n =n-1;
