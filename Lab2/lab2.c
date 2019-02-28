@@ -435,6 +435,7 @@ else {
       	col1 =1;
       	m=0;
       	}
+      	}
       	else{
       	
       	fbputchar(stringSend[col1-1 + 63],row1,col1);
