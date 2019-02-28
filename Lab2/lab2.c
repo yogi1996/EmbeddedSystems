@@ -380,7 +380,7 @@ else {
 				}
 		
 				//TRYING WITH 1 char
-				if ( (col1 >(n-1) )&& (row==21) ){
+				if ( (col1 >(n-1) )/*&& (row==21)*/ ){
 		
 				//printf("WEN AR$E FINALLY EHERE");
 	
