@@ -371,7 +371,7 @@ else {
       }
       
       //MOVING THE CURSOR RIGHT
-      fbputchar('_',row1,col1);
+      fbputchar('|',row1,col1);
       if (packet.keycode[0] == 0x4f){
 				//fbputchar(' ',row1, col1);
 				//int  z = n;
