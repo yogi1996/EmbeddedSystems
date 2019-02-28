@@ -109,6 +109,10 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
+  if (row1 == 23){
+				col1 =63;
+				row1 = 22;
+				}
   fbputchar(' ', 21, 0);
   
   printf("m:%d,n:%d,col1:%d,row1:%d",m,n,col1,row1);
