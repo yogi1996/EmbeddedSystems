@@ -365,90 +365,89 @@ else {
       //MOVING THE CURSOR RIGHT
       fbputchar('_',row1,col1);
       if (packet.keycode[0] == 0x4f){
-      	//fbputchar(' ',row1, col1);
-      	//int  z = n;
-      	//stringSend[z] = '\0';
-      	//fbputs(stringSend,21,1);
-      	//stringSend[z] = ' ';
-      	//m = m+1;
-      	
-      	//col1 = col1 +1 ;
-      	
-      	//TRYING WITH 1 char
-      	if ((col1 >n )|(col1==n)){
-      	
-      	//printf("WEN AR$E FINALLY EHERE");
-    
-      	int  z = n;
-      	stringSend[z] = '\0';
-      	
-      	printf("stringSend before: %s%m", stringSend,m);
-      	//stringSend[z] = ' ';
-      	stringSend[n] = ' ';
-      	fbputchar(" ",row1,col1);
-      	 z = n+1;
-      	stringSend[z] = '\0';
-      	m=m+1;
-      	n=n+1;
-      	col1 = col1+1;
-      	printf("stringSend after: %s%m", stringSend,m);
-      	//fbputchar(stringSend[col1-1],row1,col1);
-      	
-      	}
-      	else{
-      	// if (row1==21){
-      	fbputchar(stringSend[col1-1],row1,col1);
-      	col1 = col1+1;
-      	m=m+1;
-      	//}
-      	//}
-      	//}
-      	//else{
-      	/*fbputchar(stringSend[col1-1 +63],row1,col1);
-      	col1 = col1+1;
-      	m=m+1;*.
-      	
-      	//}*/
-      	}
-      	
-      	
+				//fbputchar(' ',row1, col1);
+				//int  z = n;
+				//stringSend[z] = '\0';
+				//fbputs(stringSend,21,1);
+				//stringSend[z] = ' ';
+				//m = m+1;
+		
+				//col1 = col1 +1 ;
+		
+				//TRYING WITH 1 char
+				if ((col1 >n )|(col1==n)){
+		
+				//printf("WEN AR$E FINALLY EHERE");
+	
+						int  z = n;
+						stringSend[z] = '\0';
+		
+						printf("stringSend before: %s%m", stringSend,m);
+						//stringSend[z] = ' ';
+						stringSend[n] = ' ';
+						fbputchar(" ",row1,col1);
+						 z = n+1;
+						stringSend[z] = '\0';
+						m=m+1;
+						n=n+1;
+						col1 = col1+1;
+						printf("stringSend after: %s%m", stringSend,m);
+						//fbputchar(stringSend[col1-1],row1,col1);
+		
+				}
+				else{
+						// if (row1==21){
+						fbputchar(stringSend[col1-1],row1,col1);
+						col1 = col1+1;
+						m=m+1;
+						//}
+						//}
+						//}
+						//else{
+						/*fbputchar(stringSend[col1-1 +63],row1,col1);
+						col1 = col1+1;
+						m=m+1;*.
+		
+						//}*/
+				}
+		
+		
       	}
       	//LEFT STILL DOESNT WORK 
       	if (packet.keycode[0] == 0x50){
-      	/*fbputchar(' ',row1, col1);
-      	col1 = col1 - 2 ;
-      	//int z1 =n;
-      	//stringSend[z1] = '\0';
-      	fbputs(stringSend,21,1);
-      	//stringSend[z1] = ' ';
-      	m=m-1;*/
-      	
-      	
-      	//TRYING WITH 1 char
-      	
-      	//Check this later: still getting weird colons cant figure out why 
-      	//also this will only work for row 21
-      	if(row1==21){
-			fbputchar(stringSend[col1-1],row1,col1);
-			m=m-1;
-			col1=col1-1;
-			if(col1<1){
-				col1 =1;
-				m=0;
-			}
-      	}
-      	else{
+				/*fbputchar(' ',row1, col1);
+				col1 = col1 - 2 ;
+				//int z1 =n;
+				//stringSend[z1] = '\0';
+				fbputs(stringSend,21,1);
+				//stringSend[z1] = ' ';
+				m=m-1;*/
 		
-			fbputchar(stringSend[col1-1 + 63],row1,col1);
-			m=m-1;
+		
+				//TRYING WITH 1 char
+		
+				//Check this later: still getting weird colons cant figure out why 
+				//also this will only work for row 21
+				if(row1==21){
+					fbputchar(stringSend[col1-1],row1,col1);
+					m=m-1;
 					col1=col1-1;
 					if(col1<1){
 						col1 =1;
 						m=0;
-		
-		
 					}
+				}
+				else{
 		
+					fbputchar(stringSend[col1-1 + 63],row1,col1);
+					m=m-1;
+							col1=col1-1;
+							if(col1<1){
+								col1 =1;
+								m=0;
+
+							}
+					}
 			}
       	
       	
