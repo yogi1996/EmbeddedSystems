@@ -373,6 +373,10 @@ else {
 				//m = m+1;
 		
 				//col1 = col1 +1 ;
+				if (col1>64){
+				col1 =1;
+				row1 = row1+1;
+				}
 		
 				//TRYING WITH 1 char
 				if ((col1 >n )|(col1==n)&(row==21)){
@@ -394,6 +398,23 @@ else {
 						printf("stringSend after: %s%m", stringSend,m);
 						//fbputchar(stringSend[col1-1],row1,col1);
 		
+				}
+				else if ( (row!=21) & (col1>(n-64)) ){
+						int  z = n;
+								stringSend[z] = '\0';
+		
+								printf("stringSend before: %s%m", stringSend,m);
+								//stringSend[z] = ' ';
+								stringSend[n] = ' ';
+								fbputchar(' ',row1,col1);
+								 z = n+1;
+								stringSend[z] = '\0';
+								m=m+1;
+								n=n+1;
+								col1 = col1+1;
+								printf("stringSend after: %s%m", stringSend,m);
+								//fbputchar(stringSend[col1-1],row1,col1);
+				
 				}
 				else{
 						if (row1==21){
