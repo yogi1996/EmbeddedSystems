@@ -112,6 +112,8 @@ int main()
   if (row1 == 23){
 				col1 =63;
 				row1 = 22;
+				m = 125;
+				n=125;
 				}
   fbputchar(' ', 21, 0);
   
