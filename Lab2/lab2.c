@@ -400,14 +400,15 @@ else {
       	fbputchar(stringSend[col1-1],row1,col1);
       	col1 = col1+1;
       	m=m+1;
-      	}
+      	//}
+      	//}
       	//}
       	//else{
       	/*fbputchar(stringSend[col1-1 +63],row1,col1);
       	col1 = col1+1;
       	m=m+1;*.
       	
-      	//}
+      	//}*/
       	}
       	
       	
@@ -450,7 +451,7 @@ else {
 		
 			}
       	
-      	}
+      	
       	
       	// THIS IS NOW BACKSPACE KEY
       if (packet.keycode[0] == 0x2a){
