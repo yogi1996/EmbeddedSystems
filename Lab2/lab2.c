@@ -400,6 +400,7 @@ else {
 						//fbputchar(stringSend[col1-1],row1,col1);
 		
 				}
+				/*
 				else if ( (row!=21) && (col1>(n-64)) ){
 						int  z = n;
 								stringSend[z] = '\0';
@@ -416,7 +417,7 @@ else {
 								printf("stringSend after: %s%m", stringSend,m);
 								//fbputchar(stringSend[col1-1],row1,col1);
 				
-				}
+				}*/
 				else{
 						if (row1==21){
 							fbputchar(stringSend[col1-1],row1,col1);
