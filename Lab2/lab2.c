@@ -375,7 +375,7 @@ else {
 				//col1 = col1 +1 ;
 		
 				//TRYING WITH 1 char
-				if ((col1 >n )|(col1==n)){
+				if ((col1 >n )|(col1==n)&&(row==21)){
 		
 				//printf("WEN AR$E FINALLY EHERE");
 	
