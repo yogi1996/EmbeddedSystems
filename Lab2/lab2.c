@@ -396,24 +396,23 @@ else {
 		
 				}
 				else{
-						// if (row1==21){
-						fbputchar(stringSend[col1-1],row1,col1);
-						col1 = col1+1;
-						m=m+1;
-						//}
-						//}
-						//}
-						//else{
-						/*fbputchar(stringSend[col1-1 +63],row1,col1);
-						col1 = col1+1;
-						m=m+1;*.
+						if (row1==21){
+							fbputchar(stringSend[col1-1],row1,col1);
+							col1 = col1+1;
+							m=m+1;
+						}
+						
+						else{
+								fbputchar(stringSend[col1-1 +63],row1,col1);
+								col1 = col1+1;
+								m=m+1;*.
 		
-						//}*/
+						}
 				}
 		
 		
       	}
-      	//LEFT STILL DOESNT WORK 
+      	//LEFT FINLALLY WORKS 
       	if (packet.keycode[0] == 0x50){
 				/*fbputchar(' ',row1, col1);
 				col1 = col1 - 2 ;
