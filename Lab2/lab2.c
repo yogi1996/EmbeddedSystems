@@ -357,7 +357,7 @@ char c  = shiftKey;
 						row1 = row1 +1 ;
 						col1 = 1;
 					}
-					while(packet.keycode[1] != 0x00)
+					while(packet.keycode[0] != 0x00)
 					{
 					
 					}
