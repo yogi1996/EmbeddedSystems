@@ -393,10 +393,10 @@ else {
 			col1 = 1;
 			}
 			
-			while(packet.keycode[1] != 0x00)
+			while(packet.keycode[2] != 0x00)
 					{
 					
-					
+					packet.keycode[1]= packet.keycode[2];
     				libusb_interrupt_transfer(keyboard, endpoint_address,
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
