@@ -495,6 +495,7 @@ else {
       	fbputchar(' ',row1, col1);
       	//printf("Before %d/n",m);
       	if (!(row == 21 && col1 <2)){
+      	//EDITED
       		m = m-2;
       	}
       	
