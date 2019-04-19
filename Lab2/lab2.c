@@ -428,12 +428,20 @@ else {
 								//printf("stringSend before: %s%m", stringSend,m);
 								//stringSend[z] = ' ';
 								//stringSend[n] = ' ';
+								
+								/*
 								fbputchar(' ',row1,col1);
+								
+								*/
 								// z = n+1;
 								//stringSend[z] = '\0';
+								
+								/*
 								m=m+1;
 								n=n+1;
-								col1 = col1+1;
+								col1 = col1+1;*/
+								
+								
 								//printf("stringSend after: %s%m", stringSend,m);
 								//fbputchar(stringSend[col1-1],row1,col1);
 				
