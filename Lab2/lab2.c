@@ -111,7 +111,7 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
-  nanosleep(1000);
+  //nanosleep(1000);
   if (packet.keycode[0]= 0x00){
   continue;
   }
@@ -158,7 +158,7 @@ int main()
       //}
       shiftKey = packet.keycode[0];
       if ((packet.keycode[0])&& (packet.keycode[0] != 0x50) &&(packet.keycode[0] != 0x4f) ) { /* NUMBERS */
-      //printf("WHY VTHE FUCK???") ;
+      //printf("WHY ") ;
       
       	if ((packet.keycode[0] > 0x1d )& (packet.keycode[0] < 0x39) & ( packet.keycode[0] != 0x2C) & ( packet.keycode[0] != 0x2A)&( packet.keycode[0] != 0x28))
       	
