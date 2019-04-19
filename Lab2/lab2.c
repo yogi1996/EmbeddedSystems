@@ -494,7 +494,7 @@ else {
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
       	//printf("Before %d/n",m);
-      	if ((row < 22 && col1 <2)){
+      	if ((row < 22 && col1 <3)){
       	//EDITED
       	
       		m=m;
