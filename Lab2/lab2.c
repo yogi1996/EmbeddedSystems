@@ -131,6 +131,7 @@ int main()
   	if (m>=n){
   	n = m;
   	}
+  	/*
   	while(packet.keycode[0] != 0x00)
 					{
 					
@@ -138,7 +139,7 @@ int main()
     libusb_interrupt_transfer(keyboard, endpoint_address,
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
-			      }
+			      }*/
 	libusb_interrupt_transfer(keyboard, endpoint_address,
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
