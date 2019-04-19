@@ -144,8 +144,8 @@ int main()
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
     if (transferred == sizeof(packet)) {
-      //sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
-	    //  packet.keycode[1]);
+      sprintf(keystate, "%02x %02x %02x", packet.modifiers, packet.keycode[0],
+	     packet.keycode[1]);
       //printf("%s\n", keystate);
       //fbputs(keystate, 6, 0);
       
@@ -393,7 +393,7 @@ else {
 			col1 = 1;
 			}
 			
-			while(packet.keycode[1] != 0x00)
+			while(packet.keycode[1] == 0x00)
 					{
 					
 					
