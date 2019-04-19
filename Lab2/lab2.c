@@ -112,7 +112,8 @@ int main()
   /* Look for and handle keypresses */
   for (;;) {
   //nanosleep(1000);
-  if (packet.keycode[0]= 0x00){
+  if (packet.keycode[1]= 0x00){
+  printf("00 code");
   continue;
   }
   if (row1 == 23){
@@ -509,9 +510,13 @@ else {
       	
       	
       	else{
-      	
+      	if (m<0){
+      	m = 0;
+      	}
+      	else{
       	
       	m = m-2;
+      	}
       	
       	col1 = col1 - 2;
       	if(col1 == 0){
@@ -594,6 +599,7 @@ else {
       if (packet.keycode[0] == 0x29) { /* ESC pressed? */
 	break;
       }
+      
     }
   }
 
