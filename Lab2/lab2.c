@@ -394,7 +394,7 @@ else {
 				}
 				if (row1> 22){
 				m =m -2;
-				fbputchar(' ',23,1);
+				fbputchar(' ',23,2);
 				continue;
 				//col1 =63;
 				//row1 = 22;
