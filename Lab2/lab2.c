@@ -112,6 +112,7 @@ int main()
   /* Look for and handle keypresses */
   for (;;) {
   //nanosleep(1000);
+  fbputchar(' ',23,1);
   if (packet.keycode[1]= 0x00){
   printf("00 code");
   continue;
@@ -394,7 +395,7 @@ else {
 				}
 				if (row1> 22){
 				m =m -2;
-				fbputchar(' ',23,2);
+				
 				continue;
 				//col1 =63;
 				//row1 = 22;
