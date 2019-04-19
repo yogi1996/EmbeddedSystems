@@ -384,6 +384,7 @@ else {
       		char c;
       		if (packet.keycode[1] != 0x00) {
       		 c = packet.keycode[1] + 93;
+      		 continue;
       		}
       		else{
       		c  = packet.keycode[0] + 93;
