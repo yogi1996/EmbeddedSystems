@@ -393,7 +393,7 @@ else {
 			col1 = 1;
 			}
 			
-			while(packet.keycode[0] != 0x00 || packet.keycode[0] != 0x28 )
+			while(packet.keycode[1] != 0x00)
 					{
 					
 					
