@@ -514,15 +514,15 @@ else {
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
       	//printf("Before %d/n",m);
-      	if ((row < 22 && col1<0)){
+      	//if ((row < 22 && col1<0)){
       	//EDITED
       	
       		//m = m;
-      		1;
-      	}
+      		//1;
+      	//}
       	
       	
-      	else{
+      	//else{
       	if (m<0){
       	m = 0;
       	}
@@ -531,7 +531,7 @@ else {
       	m = m-2;
       	}
       	
-      	col1 = col1 - 3;
+      	col1 = col1 - 2;
       	if(col1 == 0){
       		row1 = row1 -1;
       		col1 = 62;
@@ -542,7 +542,7 @@ else {
       		col1 = 1;
       	}
       	
-      	}
+      	//}
       	}
       	
       	
