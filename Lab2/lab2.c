@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include "usbkeyboard.h"
 #include <pthread.h>
+#include <unistd.h>
 
 /* Update SERVER_HOST to be the IP address of
  * the chat server you are connecting to
@@ -109,7 +110,7 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
-  delay(10000);
+  sleep(1);
   if (packet.keycode[0]= 0x00){
   continue;
   }
