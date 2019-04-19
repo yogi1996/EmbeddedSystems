@@ -109,6 +109,9 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
+  if (packet.keycode[0]= 0x00){
+  continue;
+  }
   if (row1 == 23){
 				col1 =63;
 				row1 = 22;
