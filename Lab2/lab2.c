@@ -392,6 +392,16 @@ else {
 			row1 = row1 +1 ;
 			col1 = 1;
 			}
+			
+			while(packet.keycode[0] != 0x00)
+					{
+					
+					
+    				libusb_interrupt_transfer(keyboard, endpoint_address,
+			      (unsigned char *) &packet, sizeof(packet),
+			      &transferred, 0);
+			      }	
+			      
 			}
 			}
 			
