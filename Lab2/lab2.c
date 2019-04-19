@@ -381,13 +381,14 @@ char c  = shiftKey;
 else {
       	
       		//LOWER
-      		
-      		if (packet.keycode[2] != 0x00) {
-      		char c = packet.keycode[2] + 93;
+      		char c;
+      		if (packet.keycode[1] != 0x00) {
+      		 c = packet.keycode[1] + 93;
       		}
       		else{
-      		char c  = packet.keycode[0] + 93;
+      		c  = packet.keycode[0] + 93;
       		}
+      		
       		stringSend[m] = c;
       		//printf("HERE:%s",stringSend);
       		m = m +1;
