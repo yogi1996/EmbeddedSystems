@@ -535,6 +535,8 @@ else {
       	//else{
       	if (m<0){
       	m = 0;
+      	row1=21;
+      	col1 = 1;
       	}
       	else{
       	
