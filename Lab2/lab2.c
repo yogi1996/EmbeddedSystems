@@ -111,7 +111,7 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
-  nanosleep(100);
+  nanosleep(1000);
   if (packet.keycode[0]= 0x00){
   continue;
   }
