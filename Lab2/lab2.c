@@ -380,8 +380,14 @@ char c  = shiftKey;
 			//int m =n;
 else {
       	
-      		//LOWER 
+      		//LOWER
+      		
+      		if (packet.keycode[2] != 0x00) {
+      		char c = packet.keycode[2] + 93;
+      		}
+      		else{
       		char c  = packet.keycode[0] + 93;
+      		}
       		stringSend[m] = c;
       		//printf("HERE:%s",stringSend);
       		m = m +1;
@@ -393,14 +399,14 @@ else {
 			col1 = 1;
 			}
 			
-			while(packet.keycode[2] != 0x00)
+			/*while(packet.keycode[2] != 0x00)
 					{
 					
-					packet.keycode[1]= packet.keycode[2];
+					packet.keycode[0]= packet.keycode[2];
     				libusb_interrupt_transfer(keyboard, endpoint_address,
 			      (unsigned char *) &packet, sizeof(packet),
 			      &transferred, 0);
-			      }	
+			      }	*/
 			      
 			}
 			}
