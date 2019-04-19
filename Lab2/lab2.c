@@ -501,10 +501,7 @@ else {
       	}
       	else{
       	m = m-2;
-      	}
       	
-      	
-      	//printf("After %d/n",m);
       	col1 = col1 - 2;
       	if(col1 == 0){
       		row1 = row1 -1;
@@ -517,6 +514,11 @@ else {
       	}
       	
       	}
+      	}
+      	
+      	
+      	//printf("After %d/n",m);
+      	
       
       /*	THESE WERE UP-DOWN KEYS 
       if (packet.keycode[0] == 0x52){
