@@ -367,6 +367,7 @@ char c  = shiftKey;
 						col1 = 1;
 					}
 				
+				//TRYING TO FIX SHIFT
 				while(packet.keycode[0] != 0x00)
 					{
 					
