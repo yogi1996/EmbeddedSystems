@@ -497,10 +497,14 @@ else {
       	if ((row < 22 && col1 <0)){
       	//EDITED
       	
-      		m=m;
+      		m = m;
       	}
+      	
+      	
       	else{
-      	m = m-2;
+      	
+      	
+      	//m = m-2;
       	
       	col1 = col1 - 2;
       	if(col1 == 0){
