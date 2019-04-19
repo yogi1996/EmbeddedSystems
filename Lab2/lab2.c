@@ -392,7 +392,8 @@ else {
 				col1 =1;
 				row1 = row1+1;
 				}
-				if (row1 == 23){
+				if (row1> 22){
+				m =m -2;
 				continue;
 				//col1 =63;
 				//row1 = 22;
