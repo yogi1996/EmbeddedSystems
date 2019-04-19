@@ -110,7 +110,7 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
-  sleep(1);
+  sleep(0.1);
   if (packet.keycode[0]= 0x00){
   continue;
   }
