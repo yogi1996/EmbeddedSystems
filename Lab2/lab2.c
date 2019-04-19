@@ -109,6 +109,7 @@ int main()
 
   /* Look for and handle keypresses */
   for (;;) {
+  delay(10000);
   if (packet.keycode[0]= 0x00){
   continue;
   }
