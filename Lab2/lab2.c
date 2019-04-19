@@ -529,8 +529,6 @@ else {
       	else{
       	
       	m = m-2;
-      	}
-      	
       	col1 = col1 - 2;
       	if(col1 == 0){
       		row1 = row1 -1;
@@ -541,6 +539,9 @@ else {
       		row1=21;
       		col1 = 1;
       	}
+      	}
+      	
+      	
       	
       	//}
       	}
