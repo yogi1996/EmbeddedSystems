@@ -494,7 +494,7 @@ else {
       if (packet.keycode[0] == 0x2a){
       	fbputchar(' ',row1, col1);
       	//printf("Before %d/n",m);
-      	if (!(row == 21 && col1 == 1)){
+      	if (!(row == 21 && col1 <2)){
       		m = m-2;
       	}
       	
